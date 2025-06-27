@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aexyn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="cm-header">
+        <div class="header-flex">
+            <div class="logo-col">
+                <a href="/">
+                    <img src="images/Aexyn_black_logo.png" width="150" alt="Aexyn">
+                </a>
+            </div>
+            <div class="menuTrigger"><span></span><span></span><span></span></div>
+            <nav class="navigation">
+                <div class="menuClose"><span></span></div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="has-children">
+                        <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="megaMenu">
+                            <div class="container">
+                                <h4>Services</h4>
+                                <div class="custom-row">
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>AI & DATA ENGINEERING</strong>
+                                                <ul>
+                                                    <li><a href="#">AI Consulting & Transformation</a></li>
+                                                    <li><a href="#">LLM-based Apps & GPT Integration</a></li>
+                                                    <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                    <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
+                                                    <li><a href="#">Custom AI Solution Development</a></li>
+                                                    <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>PRODUCT ENGINEERING</strong>
+                                                <ul>
+                                                    <li><a href="#">Digital Product  and Platform Development</a></li>
+                                                    <li><a href="#">Web and  Mobile App Development</a></li>
+                                                    <li><a href="#">IoT Development</a></li>
+                                                    <li><a href="#">AR Development</a></li>
+                                                    <li><a href="#">Cloud & DevOps</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>EXPERIENCE & GROWTH</strong>
+                                                <ul>
+                                                    <li><a href="#">Product Discovery and Design Sprints</a></li>
+                                                    <li><a href="#">Data-Driven UX/UI</a></li>
+                                                    <li><a href="#">Rapid Prototyping</a></li>
+                                                    <li><a href="#">Wireframes and Visual Designs</a></li>
+                                                    <li><a href="#">UI/UX</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-children">
+                        <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="megaMenu">
+                            <div class="container">
+                                <h4>Industries</h4>
+                                <div class="custom-row">
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>Fintech</strong>
+                                                <ul>
+                                                    <li><a href="#">Risk modeling</a></li>
+                                                    <li><a href="#">Fraud detection</a></li>
+                                                    <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>Healthcare</strong>
+                                                <ul>
+                                                    <li><a href="#">Predictive diagnostics</a></li>
+                                                    <li><a href="#">Patient insights</a></li>
+                                                    <li><a href="#">Automated triage</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>Retail & E-commerce</strong>
+                                                <ul>
+                                                    <li><a href="#">Hyperpersonalization</a></li>
+                                                    <li><a href="#">Inventory forecasting</a></li>
+                                                    <li><a href="#">Visual search</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>EdTech</strong>
+                                                <ul>
+                                                    <li><a href="#">LLM-based tutoring</a></li>
+                                                    <li><a href="#">Adaptive testing</a></li>
+                                                    <li><a href="#">Learning analytics</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>Manufacturing</strong>
+                                                <ul>
+                                                    <li><a href="#">Smart QA</a></li>
+                                                    <li><a href="#">Predictive maintenance</a></li>
+                                                    <li><a href="#">Digital twins</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-col-4">
+                                        <ul>
+                                            <li>
+                                                <strong>Mobility</strong>
+                                                <ul>
+                                                    <li><a href="#">Fleet optimization</a></li>
+                                                    <li><a href="#">Pricing models</a></li>
+                                                    <li><a href="#">Booking automation</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/case-studies">Case Studies</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-right-col">
+                <div class="btn-grid">
+                    <div class="btn-item">
+                        <a href="/contact-us" class="cm-btn">
+                            <span class="btn-text">Contact Us</span>
+                            <span class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <div class="body-container-wrapper">
+    <section class="banner full-banner home-banner" style="background-image:url(images/hero.jpg)">
+        <div class="container">
+            <div class="bannerContent wow slideInLeft" >
+                <div class="content-holder">
+                    <h1>Your Trusted AI Development Partner for Scalable, Intelligent Digital  Transformation</h1>
+                    <p>From intelligent platforms to predictive insights, Aexyn empowers businesses to thrive in the AI era. We build tailor-made AI solutions, LLM integrations, and scalable platforms that deliver measurable outcomes.</p>
+                </div>
+                <div class="btn-grid">
+                    <div class="btn-item">
+                        <a href="/contact-us" class="cm-btn">
+                            <span class="btn-text">Talk to an AI Expert</span>
+                            <span class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="milestones-wrapper">
+            <div class="container">
+                <div class="custom-row">
+                    <div class="custom-col-3 milestoneCol wow zoomIn" data-wow-delay="0.2s">
+                        <div class="milestone-card">
+                            <div class="icon_holder">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="counter h2"><span class="count">20</span><span class="suffix">+</span></div>
+                            <h6>Global Clients</h6>
+                        </div>
+                    </div>
+
+                    <div class="custom-col-3 milestoneCol wow zoomIn" data-wow-delay="0.4s">
+                        <div class="milestone-card">
+                            <div class="icon_holder">
+                                <i class="fa-solid fa-blender"></i>
+                            </div>
+                            <div class="counter h2"><span class="count">30</span><span class="suffix">+</span></div>
+                            <h6>Years of combined Leadership Experience</h6>
+                        </div>
+                    </div>
+
+                    <div class="custom-col-3 milestoneCol wow zoomIn" data-wow-delay="0.6s" >
+                        <div class="milestone-card">
+                            <div class="icon_holder">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="counter h2"><span class="count">20</span><span class="suffix">+</span></div>
+                            <h6>Solution Designed and Delivered</h6>
+                        </div>
+                    </div>
+
+                    <div class="custom-col-3 milestoneCol wow zoomIn" data-wow-delay="0.8s">
+                        <div class="milestone-card">
+                            <div class="icon_holder">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="counter h2"><span class="count">2</span><span class="suffix">X</span></div>
+                            <h6>Faster Go-to-Market vs Industry Avg</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions accentColor4">
+        <div class="container">
+            <div class="section_header">
+                <h2>Navigate <span class="highlighted">The Digital Experience</span> <br>With Our Engineering Excellence</h2>
+            </div>
+            <div class="custom-row">
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">AI Strategy & Consulting</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">LLM & Custom ML Model Development</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">Mobile App Development</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">Digital Transformation</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">Full-Stack Product Engineering</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">Data Engineering & MLOps</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">Cloud & DevOps</h4>
+                        <p class="desc">We stay ahead of the curve, leveraging cutting-edge technologies and strategies to keep you competitive in a marketplace.</p>
+                    </div>
+                </div>
+                <div class="custom-col-4 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                    <div class="solutionCard">
+                        <div class="iconHolder"><i class="fa-regular fa-lightbulb"></i></div>
+                        <h4 class="title">Design & Experience Engineering</h4>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="customers-section accentColor1">
+        <div class="container">
+            <div class="section_header">
+                <h2>Industries We <span class="highlighted">Transform</span></h2>
+            </div>
+        </div>
+        <div class="swiper client-slider client-slider-1">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide client-item">
+                <div class="client-logo">
+                    <img src="images/Aexyn_black_logo.png" alt="Aexyn">
+                </div>
+            </div>
+            <div class="swiper-slide client-item">
+                <div class="client-logo">
+                    <img src="images/Aexyn_black_logo.png" alt="Aexyn">
+                </div>
+            </div>
+            <div class="swiper-slide client-item">
+                <div class="client-logo">
+                <img src="images/Aexyn_black_logo.png" alt="Aexyn">
+                </div>
+            </div>
+            <div class="swiper-slide client-item">
+                <div class="client-logo">
+                <img src="images/Aexyn_black_logo.png" alt="Aexyn">
+                </div>
+            </div>
+            <div class="swiper-slide client-item">
+                <div class="client-logo">
+                <img src="images/Aexyn_black_logo.png" alt="Aexyn">
+                </div>
+            </div>
+            <div class="swiper-slide client-item">
+                <div class="client-logo">
+                <img src="images/Aexyn_black_logo.png" alt="Aexyn">
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section accentColor4">
+        <div class="container">
+            <div class="section_header">
+                <div class="custom-sec-flex">
+                    <div class="sec_title_col">
+                        <h2><span class="highlighted">Aexyn</span> Insights</h2>
+                    </div>
+                    <div class="sec_btn_col">
+                        <a href="/blog/blog-post-1" class="cm-btn">
+                            <span class="btn-text">View All</span>
+                            <span class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-row row-gap-30 blogGrid">
+                <div class="custom-col-4 blogItem">
+                    <div class="blog-card">
+                        <div class="blog-thumb">
+                            <img src="images/post-image-1.jpg" alt="The Rise of AI in Everyday Software: What You Need to Know">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-byline">
+                                <div class="tags_holder">
+                                    <span class="categories">AI</span>
+                                    <span class="categories">Machine Learning</span>
+                                </div>
+                            </div>
+                            <h4 class="title">The Rise of AI in Everyday Software: What You Need to Know</h4>
+                            <a href="/blog/blog-post-1" class="cm-btn read-more-btn">
+                                <span class="btn-text">Read More</span>
+                                <span class="btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-col-4 blogItem">
+                    <div class="blog-card">
+                        <div class="blog-thumb">
+                            <img src="images/post-image-1.jpg" alt="Top 10 DevOps Tools Every IT Team Should Know in 2025">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-byline">
+                                <div class="tags_holder">
+                                    <span class="categories">DevOps</span>
+                                    <span class="categories">Cloud</span>
+                                    <span class="categories">IT Tools</span>
+                                </div>
+                            </div>
+                            <h4 class="title">Top 10 DevOps Tools Every IT Team Should Know in 2025</h4>
+                            <a href="/blog/blog-post-1" class="cm-btn read-more-btn">
+                                <span class="btn-text">Read More</span>
+                                <span class="btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-col-4 blogItem">
+                    <div class="blog-card">
+                        <div class="blog-thumb">
+                            <img src="images/post-image-1.jpg" alt="How Cybersecurity is Changing with Quantum Computing">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-byline">
+                                <div class="tags_holder">
+                                    <span class="categories">Encryption</span>
+                                </div>
+                            </div>
+                            <h4 class="title">How Cybersecurity is Changing with Quantum Computing</h4>
+                            <a href="/blog/blog-post-1" class="cm-btn read-more-btn">
+                                <span class="btn-text">Read More</span>
+                                <span class="btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  </div>
+
+  <footer class="footer">
+    <div class="cm-footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="footer-logo">
+                    <a href="/">
+                    <img src="images/Aexyn_white_logo.png" alt="Aexyn">
+                    </a>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">Services</a>
+                            <ul>
+                                <li><a href="#">AI Agent</a></li>
+                                <li><a href="#">Automation</a></li>
+                                <li><a href="#">API Inegration</a></li>
+                                <li><a href="#">IT Services</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">Industries</a>
+                            <ul>
+                                <li><a href="#">Industry 1</a></li>
+                                <li><a href="#">Industry 1</a></li>
+                                <li><a href="#">Industry 1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">About</a>
+                            <ul>
+                                <li><a href="/about">About us</a></li>
+                                <li><a href="/blog">Blogs</a></li>
+                                <li><a href="/contact-us">Contact Us</a></li>
+                                <li><a href="/case-studies">Case Studies</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
