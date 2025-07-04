@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding AI in 2025",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-24",
+    "author": "Manoj Kumar",
+    "tags": ["AI", "Technology"],
+    "summary": "Explore how AI is shaping industries in 2025 with real-world applications.",
+    "url": "/blog/understanding-ai-2025/"
+  },
+  {
+    "id": 2,
+    "title": "Web Development Trends",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-22",
+    "author": "Manoj Kumar",
+    "tags": ["Web", "Frontend"],
+    "summary": "Discover the latest frontend frameworks and best practices.",
+    "url": "/blog/web-development-trends/"
+  },
+  {
+    "id": 3,
+    "title": "Intro to Machine Learning",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-20",
+    "author": "Manoj Kumar",
+    "tags": ["AI", "ML"],
+    "summary": "Get started with Machine Learning concepts and tools.",
+    "url": "/blog/intro-machine-learning/"
+  },
+  {
+    "id": 4,
+    "title": "Best VS Code Extensions",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-18",
+    "author": "Manoj Kumar",
+    "tags": ["Tools", "Productivity"],
+    "summary": "Boost your productivity with these essential VS Code extensions.",
+    "url": "/blog/vscode-extensions/"
+  },
+  {
+    "id": 5,
+    "title": "How to Build a Portfolio",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-16",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Step-by-step guide to creating a developer portfolio.",
+    "url": "/blog/build-portfolio/"
+  },
+  {
+    "id": 6,
+    "title": "The Power of JAMstack",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-14",
+    "author": "Manoj Kumar",
+    "tags": ["Web", "AI"],
+    "summary": "Learn why JAMstack is gaining popularity among developers.",
+    "url": "/blog/power-of-jamstack/"
+  },
+  {
+    "id": 7,
+    "title": "Top 10 HTML Tips",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-12",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Make your HTML cleaner and more accessible with these tips.",
+    "url": "/blog/top-html-tips/"
+  },
+  {
+    "id": 8,
+    "title": "CSS Grid vs Flexbox",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-10",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Understand when to use Grid vs Flexbox in real-world designs.",
+    "url": "/blog/css-grid-vs-flexbox/"
+  },
+  {
+    "id": 9,
+    "title": "Getting Started with JavaScript",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-08",
+    "author": "Manoj Kumar",
+    "tags": ["Web","AI"],
+    "summary": "A beginner-friendly guide to JavaScript basics.",
+    "url": "/blog/javascript-getting-started/"
+  },
+  {
+    "id": 10,
+    "title": "Responsive Design Basics",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-06",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Tips for making your site mobile-friendly with media queries.",
+    "url": "/blog/responsive-design-basics/"
+  },
+  {
+    "id": 11,
+    "title": "Accessibility Matters",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-04",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Make your websites more inclusive with accessibility best practices.",
+    "url": "/blog/accessibility-matters/"
+  },
+  {
+    "id": 12,
+    "title": "SEO Tips for Developers",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-06-02",
+    "author": "Manoj Kumar",
+    "tags": ["SEO", "Web"],
+    "summary": "Learn how to structure your HTML for better search engine visibility.",
+    "url": "/blog/seo-tips-developers/"
+  },
+  {
+    "id": 13,
+    "title": "Using Git Like a Pro",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-30",
+    "author": "Manoj Kumar",
+    "tags": ["AI"],
+    "summary": "Master Git commands and workflows for better version control.",
+    "url": "/blog/git-like-a-pro/"
+  },
+  {
+    "id": 14,
+    "title": "Understanding APIs",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-28",
+    "author": "Manoj Kumar",
+    "tags": ["AI"],
+    "summary": "A practical guide to working with APIs in frontend projects.",
+    "url": "/blog/understanding-apis/"
+  },
+  {
+    "id": 15,
+    "title": "Dark Mode in CSS",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-26",
+    "author": "Manoj Kumar",
+    "tags": ["AI"],
+    "summary": "Implement dark mode using CSS variables and media queries.",
+    "url": "/blog/dark-mode-css/"
+  },
+  {
+    "id": 16,
+    "title": "JavaScript ES6 Features",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-24",
+    "author": "Manoj Kumar",
+    "tags": ["AI"],
+    "summary": "An overview of modern JavaScript features you should use.",
+    "url": "/blog/js-es6-features/"
+  },
+  {
+    "id": 17,
+    "title": "How to Use Fetch API",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-22",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Learn how to make API requests using the Fetch API.",
+    "url": "/blog/fetch-api-guide/"
+  },
+  {
+    "id": 18,
+    "title": "Figma for Developers",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-20",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Improve your collaboration with designers using Figma.",
+    "url": "/blog/figma-for-devs/"
+  },
+  {
+    "id": 19,
+    "title": "Static Site Hosting Options",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-18",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Compare Netlify, Vercel, and GitHub Pages for static hosting.",
+    "url": "/blog/static-site-hosting/"
+  },
+  {
+    "id": 20,
+    "title": "Command Line for Web Devs",
+    "featured_image": "/images/post-image-1.jpg",
+    "date": "2025-05-16",
+    "author": "Manoj Kumar",
+    "tags": ["Web"],
+    "summary": "Essential terminal commands every web developer should know.",
+    "url": "/blog/cli-web-devs/"
+  }
+]

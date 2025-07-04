@@ -68,6 +68,17 @@
         $('body').removeClass('mobile-open');
       });
 
+      $('.cm-header').hover(
+        function() {
+          $('body').addClass('prevent_scroll');
+        },
+        function() {
+          $('body').removeClass('prevent_scroll');
+        }
+      );
+
+
+
       // Sticky Header
       $(window).scroll(function () {
           if ($(this).scrollTop() > 10) {
@@ -77,23 +88,104 @@
           }
       });
 
-      const slides = document.querySelector(".case-slides");
-      function hiddenScroll() {
-        return -(slides.scrollWidth - window.innerWidth);
+      
+
+
+      let sections = gsap.utils.toArray(".case-slide");
+      let mcs = gsap.matchMedia();
+      mcs.add("(min-width: 768px)", () => {
+          gsap.to(sections, {
+              xPercent: -100 * (sections.length - 1),
+              ease: "none",
+              scrollTrigger: {
+                  trigger: ".caseStudySection",
+                  pin: true,
+                  scrub: 1,
+                  start: "top top",
+                  snap: 1 / (sections.length - 1),
+                  end: () => "+=" + document.querySelector(".case-slides").offsetWidth
+              }
+          });
+      });
+
+      
+      let techSlider = document.querySelector('.tech-stack-slider');
+      if(techSlider){
+        new Swiper('.tech-stack-slider', {
+            loop: true,
+            slidesPerView: "auto",
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            slidesPerView: 6,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            breakpoints: {
+                1920: {
+                    slidesPerView: 6,
+                    spaceBetween: 30
+                },
+                1028: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
       }
-      const tween = gsap.to(slides, {
-        ease: "none",
-        x: hiddenScroll
-      });
-      ScrollTrigger.create({
-        trigger: ".caseStudySection",
-        start: "top top",
-        end: "+=500%",
-        scrub: true,
-        pin: true,
-        animation: tween,
-        invalidateOnRefresh: true
-      });
+
+      let serviceSlider = document.querySelector('.services-slider');
+      if(serviceSlider){
+        new Swiper('.services-slider', {
+            loop: true,
+            slidesPerView: "auto",
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            slidesPerView: 5,
+            paginationClickable: true,
+            centeredSlides: true,
+            spaceBetween: 1,
+            breakpoints: {
+                1920: {
+                    slidesPerView: 5,
+                    spaceBetween: 1
+                },
+                1500: {
+                    slidesPerView: 3,
+                    spaceBetween: 1
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 1,
+                    centeredSlides: false
+                },
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 1,
+                    centeredSlides: false
+                }
+            }
+        });
+      }
+      
+      $('.faq_heading').click(function(e){
+          e.preventDefault();
+          $(this).parent().toggleClass('accordon_open');
+          $(this).next().slideToggle();
+          $(this).parent().parent().siblings().find('.faq_body').slideUp();
+          $(this).parent().parent().siblings().find('.faq_card').removeClass('accordon_open')
+      })
+
+
+  
+      
+
+      
+
 
       console.log("All libraries loaded and initialized.");
 
