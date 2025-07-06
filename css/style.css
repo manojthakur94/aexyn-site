@@ -274,8 +274,9 @@ h6, .h6 {
     transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
     background-color: transparent; 
 }
-.fixheader .cm-header {
-    background-color: rgb(0, 0, 0, 1);
+.defaultHeader,
+.fixheader .cm-header   {
+    background-color: var(--accentColor2);
 }
 .has-children:before {
     content: "";
@@ -1214,12 +1215,15 @@ p:last-child {
     background-position: center;
     background-position: center;
     border-radius: 10px;
-    margin-bottom: 8vh;
     background-color: var(--accentColor3);
 }
-.bannerV2 {
-    padding: 5vh 0;
-    padding-top: calc(5vh + 100px);
+.bannerV2_content:not(:last-child) {
+    margin-bottom: 30px;
+}
+.bannerV2_content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .bannerV2 .container {
     max-width: 1300px;
@@ -1244,6 +1248,7 @@ p:last-child {
 .tech-stack .section_header  {
     margin-bottom:50px;
 }
+
 .badge {
     padding: 5px 25px;
     border: 1px solid;
@@ -1251,7 +1256,11 @@ p:last-child {
     display: inline-flex;
     border-color: var(--accentPrimary);
 }
-
+.caption {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
 .tech-stack  .tech_card {
     max-width: 150px;
     margin: 0 auto;
@@ -1325,13 +1334,19 @@ p:last-child {
     font-size: 18px;
     font-weight: bold;
     padding:35px 24px;
+    position: relative;
+    padding-right: 70px;
 }
 .faq_card .faq_heading .ct_icon {
     line-height: 0;
     transition: all 0.4s;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
 }
 .accordon_open .faq_heading  .ct_icon {
-    transform: rotate(-180deg);
+    transform: translateY(-50%) rotate(-180deg);
 }
 .pb-0 {
     padding-bottom: 0;

@@ -114,13 +114,10 @@
         new Swiper('.tech-stack-slider', {
             loop: true,
             slidesPerView: "auto",
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+            nextButton: '.tech-stack-slider .swiper-button-next',
+            prevButton: '.tech-stack-slider .swiper-button-prev',
             slidesPerView: 6,
             spaceBetween: 30,
-            pagination: {
-              el: ".swiper-pagination",
-            },
             breakpoints: {
                 1920: {
                     slidesPerView: 6,
@@ -140,11 +137,11 @@
 
       let serviceSlider = document.querySelector('.services-slider');
       if(serviceSlider){
-        new Swiper('.services-slider', {
+        var swiper = new Swiper('.services-slider', {
             loop: true,
             slidesPerView: "auto",
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+            nextButton: '.services-slider .swiper-button-next',
+            prevButton: '.services-slider .swiper-button-prev',
             slidesPerView: 5,
             paginationClickable: true,
             centeredSlides: true,
@@ -181,6 +178,11 @@
       })
 
 
+      function GetHeaderHeight() {
+        $("header.header").css("min-height", $(".defaultHeader").outerHeight())
+      }
+      GetHeaderHeight();
+      $(window).resize(GetHeaderHeight); 
   
       
 
