@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Understanding AI in 2025",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-24",
     "author": "Manoj Kumar",
     "tags": ["AI", "Technology"],
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "Web Development Trends",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-22",
     "author": "Manoj Kumar",
     "tags": ["Web", "Frontend"],
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Intro to Machine Learning",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-20",
     "author": "Manoj Kumar",
     "tags": ["AI", "ML"],
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Best VS Code Extensions",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-18",
     "author": "Manoj Kumar",
     "tags": ["Tools", "Productivity"],
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "How to Build a Portfolio",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-16",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "The Power of JAMstack",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-14",
     "author": "Manoj Kumar",
     "tags": ["Web", "AI"],
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "Top 10 HTML Tips",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-12",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "title": "CSS Grid vs Flexbox",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-10",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "title": "Getting Started with JavaScript",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-08",
     "author": "Manoj Kumar",
     "tags": ["Web","AI"],
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "title": "Responsive Design Basics",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-06",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "title": "Accessibility Matters",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-06-04",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "title": "SEO Tips for Developers",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2026-06-02",
     "author": "Manoj Kumar",
     "tags": ["SEO", "Web"],
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "title": "Using Git Like a Pro",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-30",
     "author": "Manoj Kumar",
     "tags": ["AI"],
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "title": "Understanding APIs",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-28",
     "author": "Manoj Kumar",
     "tags": ["AI"],
@@ -142,7 +142,7 @@
   {
     "id": 15,
     "title": "Dark Mode in CSS",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-26",
     "author": "Manoj Kumar",
     "tags": ["AI"],
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "title": "JavaScript ES6 Features",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-24",
     "author": "Manoj Kumar",
     "tags": ["AI"],
@@ -162,7 +162,7 @@
   {
     "id": 17,
     "title": "How to Use Fetch API",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-22",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -172,7 +172,7 @@
   {
     "id": 18,
     "title": "Figma for Developers",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-20",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -182,7 +182,7 @@
   {
     "id": 19,
     "title": "Static Site Hosting Options",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-18",
     "author": "Manoj Kumar",
     "tags": ["Web"],
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "title": "Command Line for Web Devs",
-    "featured_image": "/images/post-image-1.jpg",
+    "featured_image": "images/post-image-1.jpg",
     "date": "2025-05-16",
     "author": "Manoj Kumar",
     "tags": ["Web"],
