@@ -376,6 +376,7 @@ body:not(.fixheader) .has-children:hover:before {
 .megaMenu h4 {
     margin-bottom: 36px;
 }
+
 .megaMenu ul ul li a:before {
     content: "\f061";
     -moz-osx-font-smoothing: grayscale;
@@ -401,7 +402,6 @@ body:not(.fixheader) .has-children:hover:before {
 .menuTrigger {
     width: 35px;
     height: 35px;
-    margin-left: auto;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -454,6 +454,12 @@ body:not(.fixheader) .has-children:hover:before {
     transform: rotate(-45deg);
 }
 @media(min-width: 1200px) {
+    .megaMenu ul ul:first-child {
+        margin-top: 0;
+    }
+    .industry_menu .megaMenu ul ul {
+        column-count: 3;
+    }
     .fixheader .navigation > ul > li > a {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -518,9 +524,13 @@ body:not(.fixheader) .has-children:hover:before {
 @media(max-width: 1199px) {
     .cm-header {
         position: absolute;
+        padding:20px 0;
     }
     .header {
         position: relative;
+    }
+    .header-right-col {
+        margin-left: auto;
     }
     .cm-header {
         backdrop-filter: none;
@@ -689,7 +699,7 @@ body:not(.fixheader) .has-children:hover:before {
     margin-bottom: 15px;
 }
 .footer-menu ul ul li a {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     display: block;
     display: inline-flex;
@@ -713,8 +723,11 @@ body:not(.fixheader) .has-children:hover:before {
     text-rendering: auto;
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    transform: rotate(318deg);
+    transform: rotate(226deg);
     transition: all 0.4s;
+}
+.footer-menu ul ul li a:hover:before {
+    transform: none;
 }
 .footer-flex {
     display: flex;
@@ -1057,6 +1070,13 @@ p:last-child {
     border-radius: 12px;
     overflow: hidden;
     background: var(--accentColor4);
+    display: flex;
+    flex-direction: column;
+}
+.blog-card .readMoreHolder {
+    padding: 25px;
+    padding-top: 0;
+    margin-top: auto;
 }
 .blog-card .blog-thumb {
     overflow: hidden;
@@ -1090,30 +1110,31 @@ p:last-child {
 .blog-card .blog-byline {
     margin-bottom: 20px;
 }
-.blog-card .tags_holder {
+.blog-card:hover .blog-thumb img {
+    transform: scale(1.1);
+}
+.blog-card .byline {
+    margin-top: 20px;
+    opacity: 0.7;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
 }
-/* .blog-card .tags_holder span {
-    background: var(--accentColor2);
-    color: var(--accentColor1);
-    padding: 9px;
-    min-width: 66px;
+.blog-card .byline > span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
-    border-radius: 5px;
-} */
-.blog-card .tags_holder span:not(:last-child):after {
-    content: ", ";
 }
-.blog-card .title {
- 
+.blog-card .byline > span:not(:first-child):before {
+    content: "";
+    height: 5px;
+    width: 5px;
+    display: inline-block;
+    background: currentColor;
+    margin: 0 10px;
+    border-radius: 100%;
 }
-.blog-card:hover .blog-thumb img {
-    transform: scale(1.1);
+.divider_byline:last-child {
+    display: none;
 }
 
 
@@ -1214,16 +1235,16 @@ p:last-child {
     background-size: cover;
     background-position: center;
     background-position: center;
-    border-radius: 10px;
     background-color: var(--accentColor3);
 }
-.bannerV2_content:not(:last-child) {
-    margin-bottom: 30px;
-}
 .bannerV2_content {
+    margin-bottom: 60px;
+}
+.ban_desc {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 .bannerV2 .container {
     max-width: 1300px;
@@ -1257,9 +1278,9 @@ p:last-child {
     border-color: var(--accentPrimary);
 }
 .caption {
-    max-width: 800px;
+    max-width: 1130px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .tech-stack  .tech_card {
     max-width: 150px;
@@ -1278,6 +1299,47 @@ p:last-child {
     justify-content: center;
     height: 100%;
 }
+.tech_tab {
+    display: none;
+}
+.tech_tab.active_tab {
+    display: block;
+}
+.tabber_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.tabber_nav button:after {
+    content: "";
+    height: 3px;
+    background: var(--accentPrimary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(0);
+    transition: all 0.4s;
+}
+.tabber_nav button {
+    background: transparent;
+    border: none;
+    padding: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: bold;
+    position: relative;
+    color: var(--accentSecondary);
+}
+.tabber_nav button.active {
+    color: var(--accentPrimary);
+}
+.tabber_nav button.active:after {
+    transform: scale(1);
+}
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
     left:0;
 }
@@ -1292,9 +1354,18 @@ p:last-child {
 }
 .arrowStatic {
     display: flex;
-    gap: 100px;
-    margin-top: 20px;
+    gap: 20px;
+    margin-top: 0px;
     justify-content: center;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+}
+.arrowStatic .swiper-button-prev, .arrowStatic .swiper-button-next {
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .faq_card {
     position: relative;

@@ -36,22 +36,7 @@
         offset: 100
       });
       
-      if ($(".client-slider").length > 0) {
-        var client = new Swiper(".client-slider", {
-          slidesPerView: "auto",
-          spaceBetween: 0,
-          freemode: true,
-          centeredSlides: true,
-          loop: true,
-          speed: 5000,
-          allowTouchMove: false,
-          autoplay: {
-            delay: 1,
-            disableOnInteraction: true,
-          },
-        });
-      }
-
+      
       $('.navigation').after('<span class="menuOverlay"></span>')
 
       $('.has-children > a').click(function(e){
@@ -108,32 +93,74 @@
           });
       });
 
-      
-      let techSlider = document.querySelector('.tech-stack-slider');
-      if(techSlider){
-        new Swiper('.tech-stack-slider', {
-            loop: true,
-            slidesPerView: "auto",
-            nextButton: '.tech-stack-slider .swiper-button-next',
-            prevButton: '.tech-stack-slider .swiper-button-prev',
-            slidesPerView: 6,
-            spaceBetween: 30,
-            breakpoints: {
-                1920: {
-                    slidesPerView: 6,
-                    spaceBetween: 30
-                },
-                1028: {
-                    slidesPerView: 4,
-                    spaceBetween: 30
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                }
-            }
-        });
+
+      function tabberSliderInit() {
+        let frontednTab = document.querySelector('.frontend-slider');
+        if(frontednTab) {
+          new Swiper('.frontend-slider .tech-stack-slider', {
+              loop: false,
+              slidesPerView: "auto",
+              nextButton: '.frontend-slider .swiper-button-next',
+              prevButton: '.frontend-slider .swiper-button-prev',
+              slidesPerView: 6,
+              spaceBetween: 30,
+              breakpoints: {
+                  1920: {
+                      slidesPerView: 6,
+                      spaceBetween: 30
+                  },
+                  1028: {
+                      slidesPerView: 4,
+                      spaceBetween: 30
+                  },
+                  480: {
+                      slidesPerView: 2,
+                      spaceBetween: 30
+                  }
+              }
+          });
+        }
+        let backedTab = document.querySelector('.backend-slider');
+        if(backedTab) {
+          new Swiper('.backend-slider .tech-stack-slider', {
+              loop: false,
+              slidesPerView: "auto",
+              nextButton: '.backend-slider .swiper-button-next',
+              prevButton: '.backend-slider .swiper-button-prev',
+              slidesPerView: 6,
+              spaceBetween: 30,
+              breakpoints: {
+                  1920: {
+                      slidesPerView: 6,
+                      spaceBetween: 30
+                  },
+                  1028: {
+                      slidesPerView: 4,
+                      spaceBetween: 30
+                  },
+                  480: {
+                      slidesPerView: 2,
+                      spaceBetween: 30
+                  }
+              }
+          });
+        }
       }
+      tabberSliderInit();
+
+      $('.tabber_nav button').click(function (e) {
+        e.preventDefault();
+        const tabTarget = $(this).attr('data-target');
+        $(this).addClass('active').siblings().removeClass('active');
+        $(tabTarget).addClass('active_tab').siblings().removeClass('active_tab');
+
+        setTimeout(() => {
+           tabberSliderInit();
+        }, 700); // Allow DOM/rendering to update
+      });
+
+
+      
 
       let serviceSlider = document.querySelector('.services-slider');
       if(serviceSlider){
@@ -184,8 +211,144 @@
       GetHeaderHeight();
       $(window).resize(GetHeaderHeight); 
   
-      
+    var JSON_PATH  = 'js/blogs.json'; 
 
+    // BLog Recent Posts
+    let recentPosts = document.querySelector("#recent-posts");
+    if(recentPosts) {
+      const JSON_PATH = 'js/blogs.json';
+      const MAX_POSTS = 3;   
+
+      fetch(JSON_PATH)
+        .then(r => r.json())
+        .then(posts => {
+          // newest → oldest
+          posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+          const latest = posts.slice(0, MAX_POSTS);
+
+          const html = latest.map(post => {
+            const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric'
+            });
+
+            // clickable tag links
+            const tagsHTML = post.tags
+              .map(tag => `
+                <a class="tag-link"
+                  href="/blog?tag=${encodeURIComponent(tag)}">
+                  ${tag}
+                </a> <span class="divider_byline">, </span>`)
+              .join(' ');
+
+            return `
+              <article class="custom-col-4 blogItem">
+                <div class="blog-card">
+                  <div class="blog-thumb">
+                    <a href="${post.url}">
+                      <img src="${post.featured_image}" alt="${post.title}">
+                    </a>
+                  </div>
+
+                  <div class="blog-content">
+                    <div class="blog-byline">
+                      <div class="tags_holder">
+                        ${tagsHTML}
+                      </div>
+                    </div>
+
+                    <h4 class="title">
+                      <a href="${post.url}">${post.title}</a>
+                    </h4>
+
+                    <div class="summary">${post.summary}</div>
+
+                    <div class="byline">
+                      <span class="authorName">${post.author}</span>
+                      <span class="postDate">${formattedDate}</span>
+                    </div>
+                  </div>
+                  <div class="readMoreHolder">
+                    <a href="${post.url}" class="cm-btn read-more-btn">
+                      <span class="btn-text">Read&nbsp;More</span>
+                      <span class="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                          <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"/>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </article>`;
+          }).join('');
+
+          document.getElementById('recent-posts').innerHTML = html;
+        })
+        .catch(console.error);
+    }
+    // Recent Posts end
+
+    // Posts by tag
+    var MAX_POSTS_PER_TAG   = 3; 
+    function postCardHTML (post) {
+      var formatted = new Date(post.date).toLocaleDateString('en-US',
+                      {year:'numeric', month:'long', day:'numeric'});
+
+      var tagsHTML  = post.tags.map(function (tag) {
+        return '<a class="tag-link" href="/blog?tag=' +
+              encodeURIComponent(tag) + '">' + tag + '</a> <span class="divider_byline">, </span>';
+      }).join(' ');
+
+      return (
+        '<div class="custom-col-4 blogItem">' +
+          '<div class="blog-card">' +
+            '<div class="blog-thumb">' +
+              '<a href="' + post.url + '">' +
+                '<img src="' + post.featured_image + '" alt="' + post.title + '">' +
+              '</a>' +
+            '</div>' +
+            '<div class="blog-content">' +
+              '<div class="blog-byline"><div class="tags_holder">' + tagsHTML + '</div></div>' +
+              '<h4 class="title"><a href="' + post.url + '">' + post.title + '</a></h4>' +
+              '<div class="summary">' + post.summary + '</div>' +
+              '<div class="byline">' +
+                '<span class="authorName">' + post.author + '</span>' +
+                '<span class="postDate">' + formatted + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="readMoreHolder">'+
+              '<a href="' + post.url + '" class="cm-btn read-more-btn">' +
+                '<span class="btn-text">Read&nbsp;More</span>' +
+                '<span class="btn-icon">' +
+                  /* svg arrow */ '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">' +
+                  '<path style="fill:currentColor" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"/>' +
+                  '</svg>' +
+                '</span>' +
+              '</a>' +
+              '</div>'+
+          '</div>' +
+        '</div>'
+      );
+    }
+    fetch(JSON_PATH)
+      .then(function (r) { return r.json(); })
+      .then(function (posts) {
+        posts.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+
+        document.querySelectorAll('[data-tag]').forEach(function (container) {
+          var tag      = container.dataset.tag;
+          var filtered = posts.filter(function (p) { return p.tags.includes(tag); })
+                              .slice(0, MAX_POSTS_PER_TAG);
+
+          container.innerHTML = filtered.length
+            ? filtered.map(postCardHTML).join('')
+            : '<p class="no-posts">No recent posts tagged “' + tag + '”.</p>';
+        });
+      })
+      .catch(function (err) {
+        console.error('Blog tag grid error:', err);
+      });
+    // Posts by tag end
       
 
 

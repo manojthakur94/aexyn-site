@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <base href="http://127.0.0.1:5500/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobile and Web Application || Aexyn</title>
   <link rel="icon" href="../../images//fav_icon.png" type="image/png">
@@ -13,16 +14,15 @@
 <body>
 
     
-  <header class="header">
+ <header class="header">
     <div class="cm-header defaultHeader">
         <div class="container">
             <div class="header-flex">
                 <div class="logo-col">
                     <a href="/">
-                        <img src="../../images//Aexyn_white_logo.png" width="150" alt="Aexyn">
+                        <img src="images/Aexyn_white_logo.png" width="150" alt="Aexyn">
                     </a>
                 </div>
-                <div class="menuTrigger"><span></span><span></span><span></span></div>
                 <nav class="navigation">
                     <div class="menuClose"><span></span></div>
                     <ul>
@@ -86,86 +86,27 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="has-children">
+                        <li class="has-children industry_menu">
                             <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
                             <div class="megaMenu">
                                 <div class="container">
                                     <div class="megaMenuBg">
                                         <h4>Industries</h4>
                                         <div class="custom-row">
-                                            <div class="custom-col-4">
+                                            <div class="custom-col-12">
                                                 <ul>
                                                     <li>
-                                                        <strong>Fintech</strong>
                                                         <ul>
-                                                            <li><a href="#">Risk modeling</a></li>
-                                                            <li><a href="#">Fraud detection</a></li>
-                                                            <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                            <li><a href="#">Fintech</a></li>
+                                                            <li><a href="#">Healthcare</a></li>
+                                                            <li><a href="#">Retail & E-commerce</a></li>
+                                                            <li><a href="#">EdTech</a></li>
+                                                            <li><a href="#">Manufacturing</a></li>
+                                                            <li><a href="#">Mobility</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>Healthcare</strong>
-                                                        <ul>
-                                                            <li><a href="#">Predictive diagnostics</a></li>
-                                                            <li><a href="#">Patient insights</a></li>
-                                                            <li><a href="#">Automated triage</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>Retail & E-commerce</strong>
-                                                        <ul>
-                                                            <li><a href="#">Hyperpersonalization</a></li>
-                                                            <li><a href="#">Inventory forecasting</a></li>
-                                                            <li><a href="#">Visual search</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>EdTech</strong>
-                                                        <ul>
-                                                            <li><a href="#">LLM-based tutoring</a></li>
-                                                            <li><a href="#">Adaptive testing</a></li>
-                                                            <li><a href="#">Learning analytics</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>Manufacturing</strong>
-                                                        <ul>
-                                                            <li><a href="#">Smart QA</a></li>
-                                                            <li><a href="#">Predictive maintenance</a></li>
-                                                            <li><a href="#">Digital twins</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>Mobility</strong>
-                                                        <ul>
-                                                            <li><a href="#">Fleet optimization</a></li>
-                                                            <li><a href="#">Pricing models</a></li>
-                                                            <li><a href="#">Booking automation</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -186,6 +127,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="menuTrigger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </div>
@@ -198,7 +140,9 @@
             <div class="container">
                 <div class="bannerV2_content text-center">
                     <h1> Web and Mobile app development</h1>
-                    <p>We build high-performance web and mobile applications tailored to your business needs. From concept to launch, we deliver scalable, user-friendly solutions across all platforms.</p>
+                    <div class="ban_desc">
+                        <p>We build high-performance web and mobile applications tailored to your business needs. From concept to launch, we deliver scalable, user-friendly solutions across all platforms.</p>
+                    </div>
                     <div class="btn-grid justify-center">
                         <div class="btn-item">
                             <a href="/contact-us" class="cm-btn">
@@ -207,10 +151,15 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="banner_featured_image_holder">
-                    <div class="ban_featured_image" style="background-image:url(../../images//post-image-1.jpg);"></div>
-                    <div class="caption">We specialize in building robust web and mobile applications that are fast, secure, and user-friendly. Whether you're launching a startup or scaling an enterprise solution, our team delivers custom-built platforms tailored to your business goals.</div>
+                </div> 
+            </div>
+            <div class="banner_featured_image_holder">
+                <div class="ban_featured_image" style="background-image:url(../../images/post-1.jpeg);"></div>
+                <div class="container">
+                    <div class="caption">
+                        <span class="badge">Overview</span>
+                        <p>We specialize in building robust web and mobile applications that are fast, secure, and user-friendly. Whether you're launching a startup or scaling an enterprise solution, our team delivers custom-built platforms tailored to your business goals.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -346,45 +295,92 @@
                     <span class="badge">Technology Stack</span>
                     <h2>We build smart, scalable solutions using <br><span class="highlighted">AI and advanced engineering technologies.</span></h2>
                 </div>
-                <div class="swiper-container tech-stack-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="tech_card">
-                                <img src="../../images//React.png" width="512" alt="React">
+                <div class="tabber_nav">
+                    <button class="active" data-target="#tab_1">Frontend</button>
+                    <button data-target="#tab_2">Backend</button>
+                </div>
+                <div class="tech_tab active_tab frontend-slider" id="tab_1">
+                    <div class="swiper-container tech-stack-slider">
+                        <div class="arrowStatic">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//React.png" width="512" alt="React">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Angular.png" width="512" alt="Angular">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Node.png" width="512" alt="Node">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Joomla.png" width="512" alt="Joomla">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//MySql.png" width="512" alt="MySql">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Wordpress.png" width="512" alt="Wordpress">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="tech_card">
-                                <img src="../../images//Angular.png" width="512" alt="Angular">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tech_card">
-                                <img src="../../images//Node.png" width="512" alt="Node">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tech_card">
-                                <img src="../../images//Joomla.png" width="512" alt="Joomla">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tech_card">
-                                <img src="../../images//MySql.png" width="512" alt="MySql">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tech_card">
-                                <img src="../../images//Wordpress.png" width="512" alt="Wordpress">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arrowStatic">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
+
+                <div class="tech_tab backend-slider" id="tab_2">
+                    <div class="arrowStatic">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-container tech-stack-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//React.png" width="512" alt="React">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Angular.png" width="512" alt="Angular">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Node.png" width="512" alt="Node">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Joomla.png" width="512" alt="Joomla">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//MySql.png" width="512" alt="MySql">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech_card">
+                                    <img src="../../images//Wordpress.png" width="512" alt="Wordpress">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -578,86 +574,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="custom-row row-gap-30 blogGrid">
-                    <div class="custom-col-4 blogItem">
-                        <div class="blog-card">
-                            <div class="blog-thumb">
-                                <a href="/blog/sample-post"><img src="../../images//post-image-1.jpg" alt="The Rise of AI in Everyday Software: What You Need to Know"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-byline">
-                                    <div class="tags_holder">
-                                        <span><a href="/blog/?tag=AI" class="categories">AI</a></span>
-                                        <span><a href="/blog/?tag=Web">Machine Learning</a></span>
-                                    </div>
-                                </div>
-                                <h4 class="title">
-                                    <a href="/blog/sample-post">The Rise of AI in Everyday Software: What You Need to Know</a>
-                                </h4>
-                                <a href="/blog/sample-post" class="cm-btn read-more-btn">
-                                    <span class="btn-text">Read More</span>
-                                    <span class="btn-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                            <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom-col-4 blogItem">
-                        <div class="blog-card">
-                            <div class="blog-thumb">
-                                <a href="/blog/sample-post"><img src="../../images//post-image-1.jpg" alt="Top 10 DevOps Tools Every IT Team Should Know in 2025"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-byline">
-                                    <div class="tags_holder">
-                                        <span><a href="/blog/?tag=DevOps">DevOps</a></span>
-                                        <span><a href="/blog/?tag=Cloud">Cloud</a> </span>
-                                        <span><a href="/blog/?tag=Tools">IT Tools</a></span>
-                                    </div>
-                                </div>
-                                <h4 class="title">
-                                    <a href="/blog/sample-post">Top 10 DevOps Tools Every IT Team Should Know in 2025</a>
-                                </h4>
-                                <a href="/blog/sample-post" class="cm-btn read-more-btn">
-                                    <span class="btn-text">Read More</span>
-                                    <span class="btn-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                            <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom-col-4 blogItem">
-                        <div class="blog-card">
-                            <div class="blog-thumb">
-                                <a href="/blog/sample-post"><img src="../../images//post-image-1.jpg" alt="How Cybersecurity is Changing with Quantum Computing"></a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-byline">
-                                    <div class="tags_holder">
-                                        <span><a href="/blog/?tag=Encryption">Encryption</a></span>
-                                    </div>
-                                </div>
-                                <h4 class="title">
-                                    <a href="/blog/sample-post">How Cybersecurity is Changing with Quantum Computing</a>
-                                </h4>
-                                <a href="/blog/sample-post" class="cm-btn read-more-btn">
-                                    <span class="btn-text">Read More</span>
-                                    <span class="btn-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                            <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="custom-row row-gap-30 blogGrid" id="recent-posts"></div>
             </div>
         </section>
 
