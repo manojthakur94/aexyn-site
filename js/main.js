@@ -226,7 +226,7 @@
           posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
           const latest = posts.slice(0, MAX_POSTS);
-
+          console.log(latest)
           const html = latest.map(post => {
             const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric', month: 'long', day: 'numeric'
