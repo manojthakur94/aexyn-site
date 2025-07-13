@@ -1,28 +1,6 @@
 
-
-
-  function loadScript(src) {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement("script");
-      script.src = src;
-      script.onload = () => resolve(src);
-      script.onerror = () => reject(new Error(`Failed to load ${src}`));
-      document.head.appendChild(script);
-    });
-  }
-
-  (async () => {
-    try {
-      // Load libraries in order
-      await loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js");
-      await loadScript("https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js");
-      await loadScript("https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js");
-      await loadScript("https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js");
-      await loadScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js");
-      await loadScript("https://unpkg.com/gsap@3/dist/gsap.min.js");
-      await loadScript("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js");
-
-      wow = new WOW({
+(function() {
+    wow = new WOW({
         boxClass: 'wow', // default
         animateClass: 'animated', // default
         offset: 100 // default
@@ -51,6 +29,7 @@
 
       $('.menuClose, .menuOverlay').click(function(){
         $('body').removeClass('mobile-open');
+        $('.megaMenu').slideUp();
       });
 
       $('.cm-header').hover(
@@ -74,89 +53,61 @@
       });
 
       
-
-
-      let sections = gsap.utils.toArray(".case-slide");
-      let mcs = gsap.matchMedia();
-      mcs.add("(min-width: 768px)", () => {
-          gsap.to(sections, {
-              xPercent: -100 * (sections.length - 1),
-              ease: "none",
-              scrollTrigger: {
-                  trigger: ".caseStudySection",
-                  pin: true,
-                  scrub: 1,
-                  start: "top top",
-                  snap: 1 / (sections.length - 1),
-                  end: () => "+=" + document.querySelector(".case-slides").offsetWidth
-              }
-          });
-      });
-
+      let caseElm = document.querySelector('.case-slide');
+      if(caseElm) {
+        let sections = gsap.utils.toArray(".case-slide");
+        let mcs = gsap.matchMedia();
+        mcs.add("(min-width: 768px)", () => {
+            gsap.to(sections, {
+                xPercent: -100 * (sections.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".caseStudySection",
+                    pin: true,
+                    scrub: 1,
+                    start: "top top",
+                    snap: 1 / (sections.length - 1),
+                    end: () => "+=" + document.querySelector(".case-slides").offsetWidth
+                }
+            });
+        });
+      }
 
       function tabberSliderInit() {
-        let frontednTab = document.querySelector('.frontend-slider');
-        if(frontednTab) {
-          new Swiper('.frontend-slider .tech-stack-slider', {
-              loop: false,
-              slidesPerView: "auto",
-              nextButton: '.frontend-slider .swiper-button-next',
-              prevButton: '.frontend-slider .swiper-button-prev',
-              slidesPerView: 6,
-              spaceBetween: 30,
-              breakpoints: {
-                  1920: {
-                      slidesPerView: 6,
-                      spaceBetween: 30
-                  },
-                  1028: {
-                      slidesPerView: 4,
-                      spaceBetween: 30
-                  },
-                  480: {
-                      slidesPerView: 2,
-                      spaceBetween: 30
-                  }
-              }
-          });
-        }
-        let backedTab = document.querySelector('.backend-slider');
-        if(backedTab) {
-          new Swiper('.backend-slider .tech-stack-slider', {
-              loop: false,
-              slidesPerView: "auto",
-              nextButton: '.backend-slider .swiper-button-next',
-              prevButton: '.backend-slider .swiper-button-prev',
-              slidesPerView: 6,
-              spaceBetween: 30,
-              breakpoints: {
-                  1920: {
-                      slidesPerView: 6,
-                      spaceBetween: 30
-                  },
-                  1028: {
-                      slidesPerView: 4,
-                      spaceBetween: 30
-                  },
-                  480: {
-                      slidesPerView: 2,
-                      spaceBetween: 30
-                  }
-              }
-          });
-        }
-      }
-      tabberSliderInit();
+        const baseOptions = {
+          loop: false,
+          slidesPerView: 6,
+          spaceBetween: 30,
+          breakpoints: {
+            1920: { slidesPerView: 6, spaceBetween: 30 },
+            1028: { slidesPerView: 4, spaceBetween: 30 },
+            480:  { slidesPerView: 2, spaceBetween: 30 }
+          }
+        };
 
+        document.querySelectorAll('.tech-stack-slider').forEach(sliderEl => {
+          const nextBtn = sliderEl.querySelector('.swiper-button-next');
+          const prevBtn = sliderEl.querySelector('.swiper-button-prev');
+          const options = {
+            ...baseOptions
+          };
+          if (nextBtn && prevBtn) {
+            options.nextButton = nextBtn;
+            options.prevButton = prevBtn;
+          }
+          new Swiper(sliderEl, options);
+        });
+      }
+
+      tabberSliderInit();
       $('.tabber_nav button').click(function (e) {
         e.preventDefault();
         const tabTarget = $(this).attr('data-target');
         $(this).addClass('active').siblings().removeClass('active');
         $(tabTarget).addClass('active_tab').siblings().removeClass('active_tab');
-
         setTimeout(() => {
            tabberSliderInit();
-        }, 700); // Allow DOM/rendering to update
+        }, 200); 
       });
 
 
@@ -236,7 +187,7 @@
             const tagsHTML = post.tags
               .map(tag => `
                 <a class="tag-link"
-                  href="/blog?tag=${encodeURIComponent(tag)}">
+                  href="/blog/?tag=${encodeURIComponent(tag)}">
                   ${tag}
                 </a> <span class="divider_byline">, </span>`)
               .join(' ');
@@ -295,7 +246,7 @@
                       {year:'numeric', month:'long', day:'numeric'});
 
       var tagsHTML  = post.tags.map(function (tag) {
-        return '<a class="tag-link" href="/blog?tag=' +
+        return '<a class="tag-link" href="/blog/?tag=' +
               encodeURIComponent(tag) + '">' + tag + '</a> <span class="divider_byline">, </span>';
       }).join(' ');
 
@@ -353,13 +304,4 @@
 
 
       console.log("All libraries loaded and initialized.");
-
-    } catch (err) {
-      console.error("Script loading failed:", err);
-    }
-  })();
-
-  
-
-
-  
+})();

@@ -123,7 +123,7 @@
     "id": 13,
     "title": "Using Git Like a Pro",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-30",
+    "date": "2028-05-30",
     "author": "Manoj Kumar",
     "tags": ["AI"],
     "summary": "Master Git commands and workflows for better version control.",
@@ -198,5 +198,15 @@
     "tags": ["Web"],
     "summary": "Essential terminal commands every web developer should know.",
     "url": "/blog/cli-web-devs/"
+  },
+  {
+    "id": 21,
+    "title": "Sample Blog Post",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2030-05-16",
+    "author": "Nishant",
+    "tags": ["Web", "AI"],
+    "summary": "Learn why JAMstack is gaining popularity among developers.",
+    "url": "/blog/sample-blog-post/"
   }
 ]
