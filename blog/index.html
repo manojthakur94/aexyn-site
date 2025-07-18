@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <base href="https://manojthakur94.github.io/aexyn-site/">
+  <base href="http://127.0.0.1:5500/">
+    <!-- <base href="https://manojthakur94.github.io/aexyn-site/"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aexyn</title>
+  <title>Aexyn Blogs</title>
   <link rel="icon" href="images/fav_icon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
@@ -113,7 +114,7 @@
                             </div>
                         </li>
                         <li><a href="/case-studies">Case Studies</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/blog">Blogs</a></li>
                         <li><a href="/about-us">About Us</a></li>
                     </ul>
                 </nav>
@@ -164,12 +165,12 @@
         <section class="book_demo accentColor2">
             <div class="container">
                 <div class="demo-card max-width-800">
-                    <h3>Ready to Transform Your Business with AI & Web Technology?</h3>
-                    <p>Let us show you how our smart solutions can drive results. Book a free demo to explore how we can tailor AI-powered tools and modern web experiences to your goals.</p>
+                    <h3>Ready to Take Your Business to the Next Level?</h3>
+                    <p>Let’s explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
                     <div class="btn-grid">
                         <div class="btn-item">
                             <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Talk to an AI Expert</span>
+                                <span class="btn-text">Talk to an Expert</span>
                                 <span class="btn-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
                                         <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
@@ -315,6 +316,7 @@
                     currentPage = parseInt(e.target.getAttribute('data-page'));
                     renderPosts(filteredPosts, currentPage);
                     renderPagination(filteredPosts, currentPage);
+                    document.querySelector('.layout').scrollIntoView({ behavior: 'smooth' });
                   }
                 });
 

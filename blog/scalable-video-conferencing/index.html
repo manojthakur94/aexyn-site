@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <base href="https://manojthakur94.github.io/aexyn-site/">
+  <base href="http://127.0.0.1:5500/">
+  <!-- <base href="https://manojthakur94.github.io/aexyn-site/"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sample Blog Post</title>
+  <title>Scalable Video Conferencing</title>
   <link rel="icon" href="images/fav_icon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
@@ -113,7 +114,7 @@
                             </div>
                         </li>
                         <li><a href="/case-studies">Case Studies</a></li>
-                        <li><a href="/blog">Blos</a></li>
+                        <li><a href="/blog">Blogs</a></li>
                         <li><a href="/about-us">About Us</a></li>
                     </ul>
                 </nav>
@@ -141,10 +142,10 @@
             <div class="container">
                 <div class="small_container">
                     <span class="badge">Blog</span>
-                    <h1>Sample Blog Post</h1>
+                    <h1>How to Build Scalable Video Conferencing Tools in the New Remote World</h1>
                     <div class="post-meta">
-                        <span class="date">May 16, 2030</span>
-                        <span class="author">by Nishant</span>
+                        <span class="date">Sep 18, 2020</span>
+                        <span class="author">by Anshul</span>
                     </div>
                 </div>
             </div>
@@ -156,31 +157,50 @@
                     <main class="main-content">
                         <div class="post-body-byline">
                             <div class="tags">
-                                <a href="/blog/?tag=Web" class="badge">Web</a>
-                                <a href="/blog/?tag=AI" class="badge">AI</a>
+                                <a href="/blog/?tag=ProductEngineering" class="badge">ProductEngineering</a>
                             </div>
                         </div>
                         <article class="post-content">
-                            <h2>Understanding the Future of Web Development</h2>
-                            <p>Web development is evolving rapidly, with new technologies and frameworks emerging every day. In this post, we will explore the latest trends and how they are shaping the future of web development.</p>
-                            <h3>Key Trends in Web Development</h3>
+                           <h2 id="how-to-build-scalable-video-conferencing-tools-in-the-new-remote-world">How to Build Scalable Video Conferencing Tools in the New Remote World</h2>
+                            <p>If 2020 has a defining technology, it is without a doubt the video conference. What was once a tool for occasional remote meetings has become the central nervous system for businesses, schools, and even families. It is the digital room where work happens, where doctors meet patients, and where strategy is set.</p>
+                            <p>As we discussed in our post on &quot;<a href="/blog/digital-transformation-post-covid/">Digital Transformation Post-COVID</a>,&quot; this shift is permanent. The demand for reliable, high-quality video is not a temporary spike; it is the new baseline. But as many companies discovered, scaling video is notoriously difficult. The early-year struggles of even established platforms highlighted the immense architectural challenges involved.</p>
+                            <p>Simply &quot;adding video&quot; to an application is not enough. You must design for scale, security, and performance from day one. Here’s how.</p>
+                            <h3 id="the-foundation-understanding-webrtc">The Foundation: Understanding WebRTC</h3>
+                            <p>At the heart of modern video communication on the internet is <strong>WebRTC (Web Real-Time Communication)</strong>. WebRTC is an open-source project, originally from Google, that provides browsers and mobile applications with the ability to communicate directly with each other via video, audio, and data without needing complex plugins or native software. It&#39;s the engine behind many of the platforms you use every day.</p>
+                            <p>But while WebRTC handles the peer-to-peer connection, it doesn&#39;t solve the problem of scale. How do you connect 10, 50, or 500 people in a single call efficiently? This requires a server-side architecture.</p>
+                            <h3 id="the-critical-choice-sfu-vs-mcu-architecture">The Critical Choice: SFU vs. MCU Architecture</h3>
+                            <p>When you have a multi-party call, you can&#39;t just connect everyone to everyone else in a &quot;mesh&quot; network. The processing power and bandwidth required on each user&#39;s device would quickly become overwhelming. The solution is a central server that manages the media streams. There are two main approaches:</p>
                             <ul>
-                                <li><strong>Progressive Web Apps (PWAs):</strong> Combining the best of web and mobile apps.</li>
-                                <li><strong>Single Page Applications (SPAs):</strong> Enhancing user experience with faster load times.</li>
-                                <li><strong>Serverless Architecture:</strong> Reducing server management overhead.</li>
-                                <li><strong>AI Integration:</strong> Leveraging AI for smarter applications.</li>
+                            <li><strong>Multipoint Control Unit (MCU):</strong> An MCU is a media server that acts like a mixing board. It receives the video and audio streams from every participant, decodes them, combines them into a single new stream, and sends that composite stream back to every participant.<ul>
+                            <li><strong>Pro:</strong> Less demanding on the end-user&#39;s device.</li>
+                            <li><strong>Con:</strong> Extremely CPU-intensive on the server. Scaling is expensive and complex.</li>
                             </ul>
-                            <p>These trends are not just buzzwords; they represent a shift towards more efficient, user-friendly, and scalable web solutions.</p>
-                            <h3>Progressive Web Apps (PWAs)</h3>
-                            <p>PWAs are web applications that use modern web capabilities to deliver an app-like experience. They are reliable, fast, and engaging, making them a popular choice for developers looking to create seamless user experiences.</p>
-                            <h3>Single Page Applications (SPAs)</h3>
-                            <p>SPAs are web applications that load a single HTML page and dynamically update content as the user interacts with the app. This approach enhances user experience by providing faster load times and a more fluid interaction model.</p>              
-                            <h3>Serverless Architecture</h3>
-                            <p>Serverless architecture allows developers to build and run applications without managing servers. This model enables developers to focus on writing code while the cloud provider handles server management, scaling, and availability.</p>
-                            <h3>AI Integration</h3>
-                            <p>AI integration is becoming increasingly important in web development. By leveraging AI technologies, developers can create smarter applications that can learn from user behavior, automate tasks, and provide personalized experiences.</p> 
-                            <p>In conclusion, the future of web development is bright, with exciting trends and technologies on the horizon. By staying informed and adapting to these changes, developers can create innovative solutions that meet the evolving needs of users.</p>
-                            <p>Stay tuned for more insights and updates on the latest in web development!</p>
+                            </li>
+                            <li><strong>Selective Forwarding Unit (SFU):</strong> An SFU is a smarter, more efficient media router. It receives an individual stream from each participant but <em>doesn&#39;t</em> mix them. Instead, it forwards each incoming stream to all other participants. Each user&#39;s device receives multiple individual streams and handles rendering them.<ul>
+                            <li><strong>Pro:</strong> Far less CPU-intensive on the server, making it much easier and cheaper to scale. It also offers greater layout flexibility on the client-side.</li>
+                            <li><strong>Con:</strong> Requires more download bandwidth on the client-side (though this is manageable).</li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>As a 2018 whitepaper from the WebRTC experts at webrtcHacks details, the <strong>SFU model has become the de-facto standard for building large-scale, cost-effective video applications</strong>. It is the architecture that powers most of the modern platforms that have successfully scaled to meet 2020&#39;s unprecedented demand.</p>
+                            <h3 id="essential-design-pillars-for-a-world-class-video-app">Essential Design Pillars for a World-Class Video App</h3>
+                            <p>Beyond the core SFU architecture, building a competitive platform requires focusing on these key areas:</p>
+                            <ol>
+                            <li><strong>Cloud-Native Elasticity:</strong> Your SFU servers must run on a cloud infrastructure like AWS or Azure. This allows you to automatically spin up new media servers in different regions as demand grows and shrink the footprint during off-hours, ensuring both performance and cost-efficiency.</li>
+                            <li><strong>Ironclad Security:</strong> The &quot;Zoombombing&quot; incidents of early 2020 were a harsh lesson in the importance of security. Your platform must include:<ul>
+                            <li><strong>End-to-End Encryption (E2EE):</strong> To ensure no one, not even the server, can intercept the content of a call.</li>
+                            <li><strong>Secure Signaling:</strong> The process of setting up the call must be authenticated and encrypted.</li>
+                            <li><strong>Robust Access Controls:</strong> Features like waiting rooms, password-protected meetings, and strong host controls are no longer optional.</li>
+                            </ul>
+                            </li>
+                            <li><strong>Adaptive Bitrate Streaming (ABR):</strong> Network conditions are unpredictable. A robust platform must dynamically adjust the quality of the video stream up or down based on the user&#39;s available bandwidth. This ensures the call remains stable and usable, even on a weak connection.</li>
+                            </ol>
+                            <h3 id="aexyn-engineering-your-communication-future">Aexyn: Engineering Your Communication Future</h3>
+                            <p>The explosion of video has opened up massive opportunities for custom-built platforms tailored to specific industries, from the hyper-secure needs of &quot;<a href="/blog/telemedicine-app-development/">Telemedicine App Development</a>&quot; to corporate training and large-scale virtual events.</p>
+                            <p>At Aexyn, we possess the deep engineering expertise required to navigate these complex architectural decisions. We build bespoke, scalable, and secure real-time communication platforms for our international clients. We help you choose the right architecture (like the SFU model), implement it on a scalable cloud foundation, and build the features that will set your application apart.</p>
+
+
+
                             
                         </article>
                         <a href="/blog" class="cm-btn btn2 backToBlog">
@@ -206,19 +226,20 @@
                     <span class="badge">Blogs</span>
                     <h2><span class="highlighted">Aexyn</span> Related Posts</h2>
                 </div>
-                <div class="custom-row row-gap-30 blogGrid" id="posts-AI"  data-tag="AI"></div>
+                <div class="custom-row row-gap-30 blogGrid" id="posts-AI"  data-tag="ProductEngineering"></div>
             </div>
         </section>
 
         <section class="book_demo accentColor2">
             <div class="container">
                 <div class="demo-card max-width-800">
-                    <h3>Ready to Transform Your Business with AI & Web Technology?</h3>
-                    <p>Let us show you how our smart solutions can drive results. Book a free demo to explore how we can tailor AI-powered tools and modern web experiences to your goals.</p>
+                    <div class="demo-card max-width-800">
+                    <h3>Ready to Take Your Business to the Next Level?</h3>
+                    <p>Let’s explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
                     <div class="btn-grid">
                         <div class="btn-item">
                             <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Talk to an AI Expert</span>
+                                <span class="btn-text">Talk to an Expert</span>
                                 <span class="btn-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
                                         <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>

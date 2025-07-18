@@ -1,212 +1,343 @@
 [
   {
     "id": 1,
-    "title": "Understanding AI in 2025",
+    "title": "Digital Acceleration: How Modern Tech Stacks Fuel Business Growth",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-24",
-    "author": "Manoj Kumar",
-    "tags": ["AI", "Technology"],
-    "summary": "Explore how AI is shaping industries in 2025 with real-world applications.",
-    "url": "/blog/understanding-ai-2025/"
+    "date": "2025-06-10",
+    "author": "Parul",
+    "tags": ["DigitalTransformation"],
+    "summary": "In today's market, speed is survival. Learn how modern tech stacks built on composable, AI-native, and API-first principles are the engine for sustainable growth.",
+    "url": "/blog/digital-acceleration/"
   },
   {
     "id": 2,
-    "title": "Web Development Trends",
+    "title": "RAG Explained for CTOs: The Essential Architecture for Enterprise GenAI",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-22",
-    "author": "Manoj Kumar",
-    "tags": ["Web", "Frontend"],
-    "summary": "Discover the latest frontend frameworks and best practices.",
-    "url": "/blog/web-development-trends/"
+    "date": "2025-01-09",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": "Understand the Retrieval-Augmented Generation (RAG) architecture. Learn how it grounds LLMs in your private data, eliminates hallucinations, and unlocks real business use cases.",
+    "url": "/blog/rag-for-enterprise/"
   },
   {
     "id": 3,
-    "title": "Intro to Machine Learning",
+    "title": "Top 5 AI Use Cases in BFSI for 2021",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-20",
-    "author": "Manoj Kumar",
-    "tags": ["AI", "ML"],
-    "summary": "Get started with Machine Learning concepts and tools.",
-    "url": "/blog/intro-machine-learning/"
+    "date": "2021-01-20",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": "AI is creating real ROI in the financial sector. We explore the top 5 use cases, from fraud detection and algorithmic trading to RegTech and personalized banking.",
+    "url": "/blog/ai-use-cases-bfsi/"
   },
   {
     "id": 4,
-    "title": "Best VS Code Extensions",
+    "title": "No-Code vs. Custom Development: The 2021 Dilemma for Enterprises",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-18",
-    "author": "Manoj Kumar",
-    "tags": ["Tools", "Productivity"],
-    "summary": "Boost your productivity with these essential VS Code extensions.",
-    "url": "/blog/vscode-extensions/"
+    "date": "2021-03-16",
+    "author": "Simran",
+    "tags": ["ProductEngineering"],
+    "summary": "No-code and low-code platforms promise incredible speed, but are they right for your core business? We break down the pros and cons for scaling startups and enterprises.",
+    "url": "/blog/no-code-vs-custom-dev/"
   },
   {
     "id": 5,
-    "title": "How to Build a Portfolio",
+    "title": "Beyond Faster Downloads: How 5G Will Redefine Mobile App Performance",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-16",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Step-by-step guide to creating a developer portfolio.",
-    "url": "/blog/build-portfolio/"
+    "date": "2021-05-11",
+    "author": "Parul",
+    "tags": ["ProductEngineering"],
+    "summary": "5G is more than just speed. Learn how its ultra-low latency and massive bandwidth will unlock new real-time mobile applications in AR, VR, and IoT that were impossible on 4G.",
+    "url": "/blog/5g-mobile-apps/"
   },
   {
     "id": 6,
-    "title": "The Power of JAMstack",
+    "title": "Data Engineering vs. Data Science: Which Matters More for Data-First Companies?",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-14",
-    "author": "Manoj Kumar",
-    "tags": ["Web", "AI"],
-    "summary": "Learn why JAMstack is gaining popularity among developers.",
-    "url": "/blog/power-of-jamstack/"
+    "date": "2021-08-30",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": "Everyone wants to hire data scientists, but are they forgetting the most critical role? We break down the difference between data engineering and data science and argue why one must come first.",
+    "url": "/blog/data-engineering-vs-data-science/"
   },
   {
     "id": 7,
-    "title": "Top 10 HTML Tips",
+    "title": "RPA for SMEs: Automate Without Breaking the Bank",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-12",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Make your HTML cleaner and more accessible with these tips.",
-    "url": "/blog/top-html-tips/"
+    "date": "2021-12-10",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": "Discover how low-cost Robotic Process Automation (RPA) tools can deliver high-impact results for SMEs, automating repetitive tasks and freeing up your team for growth.",
+    "url": "/blog/rpa-for-smes/"
   },
   {
     "id": 8,
-    "title": "CSS Grid vs Flexbox",
+    "title": "Building for Web3: How IT Services Must Adapt to the Decentralized Future",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-10",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Understand when to use Grid vs Flexbox in real-world designs.",
-    "url": "/blog/css-grid-vs-flexbox/"
+    "date": "2022-02-02",
+    "author": "Simran",
+    "tags": ["DigitalTransformation"],
+    "summary": "Web3 is more than a buzzword. We explore the fundamental shift from Web2 to the decentralized web and explain where IT service companies fit in this new blockchain-based economy.",
+    "url": "/blog/web3-it-services/"
   },
   {
     "id": 9,
-    "title": "Getting Started with JavaScript",
+    "title": "Sustainable IT: Building ESG-Driven Digital Services",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-08",
-    "author": "Manoj Kumar",
-    "tags": ["Web","AI"],
-    "summary": "A beginner-friendly guide to JavaScript basics.",
-    "url": "/blog/javascript-getting-started/"
+    "date": "2022-04-22",
+    "author": "Anshul",
+    "tags": ["IndustrySolutions"],
+    "summary": "IT is a major consumer of global energy. On Earth Day, we explore Sustainable IT—the practice of building greener software and energy-conscious infrastructure to meet modern ESG goals.",
+    "url": "/blog/sustainable-it/"
   },
   {
     "id": 10,
-    "title": "Responsive Design Basics",
+    "title": "Mastering Kubernetes in Enterprise Environments",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-06",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Tips for making your site mobile-friendly with media queries.",
-    "url": "/blog/responsive-design-basics/"
+    "date": "2022-07-14",
+    "author": "Ankit",
+    "tags": ["CloudAndDevOps"],
+    "summary": "Your guide to orchestration, scaling, and securing microservices with Kubernetes. Move beyond basic deployment to build a truly enterprise-grade platform.",
+    "url": "/blog/enterprise-kubernetes/"
   },
   {
     "id": 11,
-    "title": "Accessibility Matters",
+    "title": "Cloud Cost Optimization: Beyond Lift and Shift to True FinOps",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-06-04",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Make your websites more inclusive with accessibility best practices.",
-    "url": "/blog/accessibility-matters/"
+    "date": "2022-09-09",
+    "author": "Faraz",
+    "tags": ["CloudAndDevOps"],
+    "summary": "Are you suffering from a cloud BILL SHOCK? Learn how to reduce waste and improve ROI by moving beyond basic cost-cutting to a true FinOps culture.",
+    "url": "/blog/cloud-cost-optimization/"
   },
   {
     "id": 12,
-    "title": "SEO Tips for Developers",
+    "title": "Composable Commerce: The Headless, API-First Future of Retail",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2026-06-02",
-    "author": "Manoj Kumar",
-    "tags": ["SEO", "Web"],
-    "summary": "Learn how to structure your HTML for better search engine visibility. Discover best practices for using headings, semantic tags, and clean code to improve SEO, enhance user experience, and help search engines understand your content more effectively.",
-    "url": "/blog/seo-tips-developers/"
+    "date": "2022-11-28",
+    "author": "Manoj",
+    "tags": ["IndustrySolutions"],
+    "summary": "A guide to headless commerce, APIs, and MACH architecture. Learn why modern retailers are adopting a composable approach to build flexible, best-of-breed e-commerce platforms.",
+    "url": "/blog/composable-commerce/"
   },
   {
     "id": 13,
-    "title": "Using Git Like a Pro",
+    "title": "Generative AI for Enterprises: Beyond the Hype",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2028-05-30",
-    "author": "Manoj Kumar",
-    "tags": ["AI"],
-    "summary": "Master Git commands and workflows for better version control.",
-    "url": "/blog/git-like-a-pro/"
+    "date": "2023-01-18",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": " ChatGPT has created massive hype. Now, let's explore the real business use cases for Generative AI and LLMs in 2023, from marketing to software development.",
+    "url": "/blog/generative-ai-enterprise/"
   },
   {
     "id": 14,
-    "title": "Understanding APIs",
+    "title": "Securing SaaS Applications in 2023: A CISO's Guide",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-28",
-    "author": "Manoj Kumar",
-    "tags": ["AI"],
-    "summary": "A practical guide to working with APIs in frontend projects.",
-    "url": "/blog/understanding-apis/"
+    "date": "2023-03-08",
+    "author": "Faraz",
+    "tags": ["SecurityAndCompliance"],
+    "summary": "SaaS sprawl has created a new, decentralized security challenge. Learn the essential practices for securing identity, access, and data across your entire SaaS application portfolio.",
+    "url": "/blog/saas-security-guide/"
   },
   {
     "id": 15,
-    "title": "Dark Mode in CSS",
+    "title": "DevEx: Why the Developer Experience is Your Most Critical Business Metric",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-26",
-    "author": "Manoj Kumar",
-    "tags": ["AI"],
-    "summary": "Implement dark mode using CSS variables and media queries.",
-    "url": "/blog/dark-mode-css/"
+    "date": "2023-06-21",
+    "author": "Ankit",
+    "tags": ["ProductEngineering"],
+    "summary": "Stop burning out your best talent. Learn why improving the internal Developer Experience (DevEx) is the key to accelerating delivery, improving code quality, and winning the war for talent.",
+    "url": "/blog/developer-experience/"
   },
   {
     "id": 16,
-    "title": "JavaScript ES6 Features",
+    "title": "From MVP to Enterprise Scale: Making the Right Architecture Choices",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-24",
-    "author": "Manoj Kumar",
-    "tags": ["AI"],
-    "summary": "An overview of modern JavaScript features you should use.",
-    "url": "/blog/js-es6-features/"
+    "date": "2023-09-05",
+    "author": "Faraz",
+    "tags": ["ProductEngineering"],
+    "summary": "The architecture that gets you to product-market fit won't get you to 1 million users. Learn the key architectural choices to make at each stage of your product's growth.",
+    "url": "/blog/mvp-to-enterprise/"
   },
   {
     "id": 17,
-    "title": "How to Use Fetch API",
+    "title": "2023 Tech Roundup: A Year of AI, Cloud-Native, and Resilience",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-22",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Learn how to make API requests using the Fetch API.",
-    "url": "/blog/fetch-api-guide/"
+    "date": "2023-12-19",
+    "author": "Ankit",
+    "tags": ["DigitalTransformation"],
+    "summary": "A yearly wrap-up of the digital evolution trends that mattered most in 2023, from the explosion of Generative AI to the maturation of platform engineering and the need for resilience.",
+    "url": "/blog/2023-tech-roundup/"
   },
   {
     "id": 18,
-    "title": "Figma for Developers",
+    "title": "Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-20",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Improve your collaboration with designers using Figma.",
-    "url": "/blog/figma-for-devs/"
+    "date": "2024-05-20",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": "Large Language Models (LLMs) are being applied to business. Learn how the copilot pattern is emerging as the key to building valuable internal and external AI assistants.",
+    "url": "/blog/ai-copilot-enterprise/"
   },
   {
     "id": 19,
-    "title": "Static Site Hosting Options",
+    "title": "Platform Engineering vs. DevOps: What’s the Real Difference?",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-18",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Compare Netlify, Vercel, and GitHub Pages for static hosting.",
-    "url": "/blog/static-site-hosting/"
+    "date": "2024-03-19",
+    "author": "Faraz",
+    "tags": ["CloudAndDevOps"],
+    "summary": "The terms are often used interchangeably, but they aren't the same. Learn what Platform Engineering really is, how it evolved from DevOps, and when to apply each practice.",
+    "url": "/blog/platform-vs-devops/"
   },
   {
     "id": 20,
-    "title": "Command Line for Web Devs",
+    "title": "Digital Lending Platforms: What FinTechs Need to Know in 2024",
     "featured_image": "images/post-image-1.jpg",
-    "date": "2025-05-16",
-    "author": "Manoj Kumar",
-    "tags": ["Web"],
-    "summary": "Essential terminal commands every web developer should know.",
-    "url": "/blog/cli-web-devs/"
+    "date": "2024-05-27",
+    "author": "Sachin",
+    "tags": ["SecurityAndCompliance"],
+    "summary": "The digital lending space in India is booming but complex. This guide covers the critical aspects FinTechs need to know about RBI guidelines, security, and building scalable lending apps.",
+    "url": "/blog/digital-lending-fintech/"
   },
   {
     "id": 21,
-    "title": "Sample Blog Post",
+    "title": "Why WCAG 2.1 Compliance Matters More Than Ever in 2024",
     "featured_image": "images/sample-post.jpeg",
-    "date": "2030-05-16",
-    "author": "Nishant",
-    "tags": ["Web", "AI"],
-    "summary": "Learn why JAMstack is gaining popularity among developers.",
-    "url": "/blog/sample-blog-post/"
+    "date": "2024-08-08",
+    "author": "Ankit",
+    "tags": ["SecurityAndCompliance"],
+    "summary": "Building accessible products is not just a 'nice-to-have'. Learn why complying with WCAG 2.1 global standards is essential for legal, ethical, and commercial success in 2024.",
+    "url": "/blog/wcag-2-1-compliance/"
+  },
+   {
+    "id": 22,
+    "title": "Why Enterprises are Moving to Microservices",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2019-01-15",
+    "author": "Simran",
+    "tags": ["CloudAndDevOps"],
+    "summary": "Discover why enterprises are abandoning monolithic architectures for microservices. Learn about the benefits of microservices, including improved agility, scalability, and faster time-to-market.",
+    "url": "/blog/enterprise-microservices/"
+  },
+
+   {
+    "id": 23,
+    "title": "Serverless Computing: The Future of Cloud-Native Apps",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2019-03-10",
+    "author": "Simran",
+    "tags": ["CloudAndDevOps"],
+    "summary": "Serverless is reshaping cloud-native application development. Learn what serverless computing is and why it's the next frontier beyond microservices for building scalable, cost-effective applications.",
+    "url": "/blog/serverless-computing/"
+  },
+   {
+    "id": 24,
+    "title": "Modernizing Legacy Systems: A Step-by-Step Guide for 2019",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2019-05-21",
+    "author": "Simran",
+    "tags": ["DigitalTransformation"],
+    "summary": "A practical, step-by-step guide for enterprises on how to transform aging legacy applications using modern, cloud-native technologies and strategies.",
+    "url": "/blog/modernizing-legacy-systems/"
+  },
+   {
+    "id": 26,
+    "title": "How to Plan Your Cloud Migration Without Downtime",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2019-07-12",
+    "author": "Simran",
+    "tags": ["CloudAndDevOps"],
+    "summary": "Unlock the power of the cloud without disrupting your business. Follow these proven tips and steps for a smooth, risk-free migration to cloud infrastructure like AWS and Azure.",
+    "url": "/blog/cloud-migration-plan/"
+  },
+   {
+    "id": 27,
+    "title": "The Rise of PWAs for Enterprises: The Best of Web and Mobile Combined",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2019-10-02",
+    "author": "Ankit",
+    "tags": ["ProductEngineering"],
+    "summary": "Discover how Progressive Web Apps (PWAs) deliver a reliable, fast, and engaging app-like experience directly from the browser, solving the native vs. web dilemma for enterprises.",
+    "url": "/blog/pwas-for-enterprise/"
+  },
+  {
+    "id": 28,
+    "title": "IT Preparedness for COVID-19: Is Your Business Ready?",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2020-02-03",
+    "author": "Ankit",
+    "tags": ["DigitalTransformation"],
+    "summary": "As global uncertainty around the novel coronavirus grows, we explore how enterprises can prepare their IT infrastructure for a potential large-scale shift to remote work and secure operations.",
+    "url": "/blog/it-preparedness-covid19/"
+  },
+  {
+    "id": 28,
+    "title": "Telemedicine App Development: Why It’s Surging and How to Build One Now",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2020-04-09",
+    "author": "Ankit",
+    "tags": ["IndustrySolutions"],
+    "summary": "With the COVID-19 pandemic accelerating adoption, learn why telehealth apps are surging and what core features are required to build a secure, compliant, and effective platform.",
+    "url": "/blog/telemedicine-app-development/"
+  },
+  {
+    "id": 29,
+    "title": "Digital Transformation Post-COVID: What Has Changed for Good?",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2020-07-05",
+    "author": "Anshul",
+    "tags": ["DigitalTransformation"],
+    "summary": "Explore the key business shifts and technology enablers defining the post-COVID era. We've moved from crisis response to a new, permanent digital reality.",
+    "url": "/blog/digital-transformation-post-covid/"
+  },
+  {
+    "id": 30,
+    "title": "How to Build Scalable Video Conferencing Tools in the New Remote World",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2020-09-18",
+    "author": "Anshul",
+    "tags": ["ProductEngineering"],
+    "summary": "With video now essential, learn the key design tips for building scalable, secure, and high-performance video conferencing platforms using WebRTC, SFUs, and modern cloud infrastructure.",
+    "url": "/blog/scalable-video-conferencing/"
+  },
+  {
+    "id": 31,
+    "title": "Cybersecurity in a Remote-First World: The New Rules of Engagement",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2020-11-25",
+    "author": "Faraz",
+    "tags": ["SecurityAndCompliance"],
+    "summary": "The rapid shift to remote work created new vulnerabilities. Learn how to counter modern cyber threats with a Zero Trust model, robust endpoint security, and a proactive defense strategy.",
+    "url": "/blog/cybersecurity-remote-work/"
+  },
+   {
+    "id": 32,
+    "title": "Building Compliant GenAI Products: Tackling Hallucinations, Bias, and Governance",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2024-10-17",
+    "author": "Sachin",
+    "tags": ["SecurityAndCompliance"],
+    "summary": "Moving GenAI from prototype to production? Learn how to tackle the critical compliance challenges of hallucinations, bias, and data privacy to build AI products your customers can trust.",
+    "url": "/blog/compliant-genai-products/"
+  },
+  {
+    "id": 33,
+    "title": "AI-Native SaaS: Why the Future Belongs to Products Built on AI",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2025-02-26",
+    "author": "Aman",
+    "tags": ["AI&ML"],
+    "summary": "The future of SaaS isn't about bolting AI onto an old product. It's about AI-Native companies building their entire product and user experience around a core AI engine.",
+    "url": "/blog/ai-native-saas/"
+  },
+   {
+    "id": 34,
+    "title": "API Monetization: Turning Your Tech into a Revenue Engine",
+    "featured_image": "images/sample-post.jpeg",
+    "date": "2025-04-15",
+    "author": "Simran",
+    "tags": ["ProductEngineering"],
+    "summary": "APIs are no longer just technical plumbing; they are products. Learn how to turn your company's APIs into a powerful new revenue stream through strategic monetization.",
+    "url": "/blog/api-monetization/"
   }
 ]
