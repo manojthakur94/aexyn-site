@@ -142,7 +142,7 @@
                 <div class="small_container">
                     <span class="badge">Blogs</span>
                     <h1><span class="highlighted">Aexyn</span> Blogs</h1>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero architecto cupiditate dolores hic sapiente quidem enim, voluptas consectetur, adipisci nobis velit debitis quas cum maxime ipsam minima, reprehenderit cumque animi.</h5>
+                    <h5>Explore our expert insights, thought leadership, and industry trends that drive digital transformation. From AI breakthroughs to development best practices, our blogs are curated to help you stay ahead. Dive in to discover actionable strategies and innovations shaping the future.</h5>
                 </div>                
             </div>
         </section>
@@ -260,18 +260,41 @@
             document.getElementById('pagination').innerHTML = pagination;
           }
 
-          function renderTags(posts) {
-            var tagSet = new Set();
-            posts.forEach(function (post) {
-              (post.tags || []).forEach(function (tag) { tagSet.add(tag); });
-            });
-            var tags = Array.from(tagSet).sort();
-            var html = '<button class="tag-btn' + (currentTag === null ? ' active' : '') + '" data-tag="">All</button>';
-            tags.forEach(function (tag) {
-              html += '<button class="tag-btn' + (currentTag === tag ? ' active' : '') + '" data-tag="' + encodeURIComponent(tag) + '">' + tag + '</button>';
-            });
-            document.querySelector('.tag-filter').innerHTML = html;
-          }
+        //   function renderTags(posts) {
+        //     var tagSet = new Set();
+        //     posts.forEach(function (post) {
+        //       (post.tags || []).forEach(function (tag) { tagSet.add(tag); });
+        //     });
+        //     var tags = Array.from(tagSet).sort();
+        //     var html = '<button class="tag-btn' + (currentTag === null ? ' active' : '') + '" data-tag="">All</button>';
+        //     tags.forEach(function (tag) {
+        //       html += '<button class="tag-btn' + (currentTag === tag ? ' active' : '') + '" data-tag="' + encodeURIComponent(tag) + '">' + tag + '</button>';
+        //     });
+        //     document.querySelector('.tag-filter').innerHTML = html;
+        //   }
+
+        function renderTags(posts) {
+                const tagCounts = {};
+                let totalCount = 0;
+
+                posts.forEach(post => {
+                    totalCount++;
+                    (post.tags || []).forEach(tag => {
+                    tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+                    });
+                });
+
+                const tags = Object.keys(tagCounts).sort();
+
+                let html = `<button class="tag-btn${currentTag === null ? ' active' : ''}" data-tag="">All (${totalCount})</button>`;
+
+                tags.forEach(tag => {
+                    const count = tagCounts[tag];
+                    html += `<button class="tag-btn${currentTag === tag ? ' active' : ''}" data-tag="${encodeURIComponent(tag)}">${tag} (${count})</button>`;
+                });
+
+                document.querySelector('.tag-filter').innerHTML = html;
+        }
 
           function filterPostsByTag(tag) {
             if (!tag) {
