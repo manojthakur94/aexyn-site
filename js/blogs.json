@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Digital Acceleration: How Modern Tech Stacks Fuel Business Growth",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/digital_acceleration.jpeg",
     "date": "2025-06-10",
     "author": "Parul",
     "tags": ["DigitalTransformation"],
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "RAG Explained for CTOs: The Essential Architecture for Enterprise GenAI",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/rag_explained.jpeg",
     "date": "2025-01-09",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Top 5 AI Use Cases in BFSI for 2021",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/bfsi.jpg",
     "date": "2021-01-20",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "No-Code vs. Custom Development: The 2021 Dilemma for Enterprises",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/no_code.jpeg",
     "date": "2021-03-16",
     "author": "Simran",
     "tags": ["ProductEngineering"],
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Beyond Faster Downloads: How 5G Will Redefine Mobile App Performance",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/5g.jpeg",
     "date": "2021-05-11",
     "author": "Parul",
     "tags": ["ProductEngineering"],
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Data Engineering vs. Data Science: Which Matters More for Data-First Companies?",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/data_engineers.jpeg",
     "date": "2021-08-30",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "RPA for SMEs: Automate Without Breaking the Bank",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/rpa_2021.jpeg",
     "date": "2021-12-10",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "title": "Building for Web3: How IT Services Must Adapt to the Decentralized Future",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/web3.jpeg",
     "date": "2022-02-02",
     "author": "Simran",
     "tags": ["DigitalTransformation"],
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "title": "Sustainable IT: Building ESG-Driven Digital Services",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/esg.jpeg",
     "date": "2022-04-22",
     "author": "Anshul",
     "tags": ["IndustrySolutions"],
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "title": "Mastering Kubernetes in Enterprise Environments",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/mastering_kub.jpeg",
     "date": "2022-07-14",
     "author": "Ankit",
     "tags": ["CloudAndDevOps"],
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "title": "Cloud Cost Optimization: Beyond Lift and Shift to True FinOps",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/cloud_cost_optimization.jpeg",
     "date": "2022-09-09",
     "author": "Faraz",
     "tags": ["CloudAndDevOps"],
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "title": "Composable Commerce: The Headless, API-First Future of Retail",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/composable_commerce.jpeg",
     "date": "2022-11-28",
     "author": "Manoj",
     "tags": ["IndustrySolutions"],
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "title": "Generative AI for Enterprises: Beyond the Hype",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/genai_enterprises.jpeg",
     "date": "2023-01-18",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "title": "Securing SaaS Applications in 2023: A CISO's Guide",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/modern_saas_security.jpeg",
     "date": "2023-03-08",
     "author": "Faraz",
     "tags": ["SecurityAndCompliance"],
@@ -142,7 +142,7 @@
   {
     "id": 15,
     "title": "DevEx: Why the Developer Experience is Your Most Critical Business Metric",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/dev_productivity.jpeg",
     "date": "2023-06-21",
     "author": "Ankit",
     "tags": ["ProductEngineering"],
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "title": "From MVP to Enterprise Scale: Making the Right Architecture Choices",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/mvp_to_enterprise.jpeg",
     "date": "2023-09-05",
     "author": "Faraz",
     "tags": ["ProductEngineering"],
@@ -162,7 +162,7 @@
   {
     "id": 17,
     "title": "2023 Tech Roundup: A Year of AI, Cloud-Native, and Resilience",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/roundup_2023.jpeg",
     "date": "2023-12-19",
     "author": "Ankit",
     "tags": ["DigitalTransformation"],
@@ -172,7 +172,7 @@
   {
     "id": 18,
     "title": "Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/building_Your_First _AI _Copilot.jpeg",
     "date": "2024-05-20",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -182,7 +182,7 @@
   {
     "id": 19,
     "title": "Platform Engineering vs. DevOps: What’s the Real Difference?",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/platform_engineering_vs_DevOps.jpeg",
     "date": "2024-03-19",
     "author": "Faraz",
     "tags": ["CloudAndDevOps"],
@@ -192,7 +192,7 @@
   {
     "id": 20,
     "title": "Digital Lending Platforms: What FinTechs Need to Know in 2024",
-    "featured_image": "images/post-image-1.jpg",
+    "featured_image": "images/digital_leading_platform.jpeg",
     "date": "2024-05-27",
     "author": "Sachin",
     "tags": ["SecurityAndCompliance"],
@@ -202,7 +202,7 @@
   {
     "id": 21,
     "title": "Why WCAG 2.1 Compliance Matters More Than Ever in 2024",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/wcag.jpeg",
     "date": "2024-08-08",
     "author": "Ankit",
     "tags": ["SecurityAndCompliance"],
@@ -233,7 +233,7 @@
    {
     "id": 24,
     "title": "Modernizing Legacy Systems: A Step-by-Step Guide for 2019",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/legacy_system.jpeg",
     "date": "2019-05-21",
     "author": "Simran",
     "tags": ["DigitalTransformation"],
@@ -243,7 +243,7 @@
    {
     "id": 26,
     "title": "How to Plan Your Cloud Migration Without Downtime",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/cloud_migration_without.jpeg",
     "date": "2019-07-12",
     "author": "Simran",
     "tags": ["CloudAndDevOps"],
@@ -263,7 +263,7 @@
   {
     "id": 28,
     "title": "IT Preparedness for COVID-19: Is Your Business Ready?",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/it_preparedness.jpeg",
     "date": "2020-02-03",
     "author": "Ankit",
     "tags": ["DigitalTransformation"],
@@ -273,7 +273,7 @@
   {
     "id": 28,
     "title": "Telemedicine App Development: Why It’s Surging and How to Build One Now",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/telemedicine_old.jpeg",
     "date": "2020-04-09",
     "author": "Ankit",
     "tags": ["IndustrySolutions"],
@@ -293,7 +293,7 @@
   {
     "id": 30,
     "title": "How to Build Scalable Video Conferencing Tools in the New Remote World",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/video_conferencing.jpeg",
     "date": "2020-09-18",
     "author": "Anshul",
     "tags": ["ProductEngineering"],
@@ -303,7 +303,7 @@
   {
     "id": 31,
     "title": "Cybersecurity in a Remote-First World: The New Rules of Engagement",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/cybersecurity.jpeg",
     "date": "2020-11-25",
     "author": "Faraz",
     "tags": ["SecurityAndCompliance"],
@@ -313,7 +313,7 @@
    {
     "id": 32,
     "title": "Building Compliant GenAI Products: Tackling Hallucinations, Bias, and Governance",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/compliant_genai_products.jpeg",
     "date": "2024-10-17",
     "author": "Sachin",
     "tags": ["SecurityAndCompliance"],
@@ -323,7 +323,7 @@
   {
     "id": 33,
     "title": "AI-Native SaaS: Why the Future Belongs to Products Built on AI",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/ai_native_saas.jpeg",
     "date": "2025-02-26",
     "author": "Aman",
     "tags": ["AI&ML"],
@@ -333,7 +333,7 @@
    {
     "id": 34,
     "title": "API Monetization: Turning Your Tech into a Revenue Engine",
-    "featured_image": "images/sample-post.jpeg",
+    "featured_image": "images/api_monetization.jpeg",
     "date": "2025-04-15",
     "author": "Simran",
     "tags": ["ProductEngineering"],
