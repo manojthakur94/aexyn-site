@@ -44,6 +44,24 @@ jobs:
           echo "Package.json exists: $(test -f package.json && echo 'Yes' || echo 'No')"
           echo "Environment: Development"
           
+          # Validate required secrets
+          if [ -z "${{ secrets.FIREBASE_PROJECT_ID }}" ]; then
+            echo "❌ ERROR: FIREBASE_PROJECT_ID secret is not set!"
+            echo "Please add this secret in GitHub repository settings."
+            exit 1
+          fi
+          
+          if [ -z "${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}" ]; then
+            echo "❌ ERROR: FIREBASE_SERVICE_ACCOUNT_KEY secret is not set!"
+            echo "Please add this secret in GitHub repository settings."
+            exit 1
+          fi
+          
+          echo "✅ All required secrets are configured"
+          echo "Project ID: ${{ secrets.FIREBASE_PROJECT_ID }}"
+          echo "Target: development (aexyn-site-dev)"
+          echo "Expected URL: https://aexyn-site-dev.web.app"
+          
           echo "node-version=$NODE_VER" >> $GITHUB_OUTPUT
           echo "npm-version=$NPM_VER" >> $GITHUB_OUTPUT
           echo "commit-sha=$COMMIT_SHA" >> $GITHUB_OUTPUT
@@ -104,7 +122,7 @@ jobs:
       - name: 🏗️ Build Development Site
         env:
           NODE_ENV: development
-          BASE_URL: https://${{ secrets.FIREBASE_DEV_PROJECT_ID }}.web.app
+          BASE_URL: https://aexyn-site-dev.web.app
         run: |
           echo "Building for development environment..."
           echo "Base URL: $BASE_URL"
@@ -196,7 +214,8 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
           channelId: live
-          projectId: ${{ secrets.FIREBASE_DEV_PROJECT_ID }}
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
+          target: development
 
       - name: 🔍 Debug Firebase Outputs
         run: |
@@ -217,7 +236,7 @@ jobs:
           # Wait a moment for deployment to propagate
           sleep 10
           
-          SITE_URL="https://${{ secrets.FIREBASE_DEV_PROJECT_ID }}.web.app"
+          SITE_URL="https://aexyn-site-dev.web.app"
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL" || echo "000")
           RESPONSE_TIME=$(curl -s -o /dev/null -w "%{time_total}" "$SITE_URL" || echo "0")
           
@@ -234,7 +253,7 @@ jobs:
       - name: 📊 Deployment Summary
         run: |
           echo "## Development Deployment Complete" >> $GITHUB_STEP_SUMMARY
-          echo "- **Dev URL:** https://${{ secrets.FIREBASE_DEV_PROJECT_ID }}.web.app" >> $GITHUB_STEP_SUMMARY
+          echo "- **Dev URL:** https://aexyn-site-dev.web.app" >> $GITHUB_STEP_SUMMARY
           echo "- **Firebase Console:** ${{ needs.deploy.outputs.deployment-url }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit:** ${{ needs.setup.outputs.commit-sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
