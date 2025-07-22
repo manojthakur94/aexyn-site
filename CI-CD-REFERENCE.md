@@ -49,9 +49,10 @@ npm run firebase:deploy:dev    # Deploy to development
 
 | Secret Name | Description |
 |-------------|-------------|
-| `FIREBASE_PROJECT_ID` | Production Firebase project ID (`aexyn-site`) |
-| `FIREBASE_DEV_PROJECT_ID` | Development Firebase project ID (`aexyn-site-dev`) |
-| `FIREBASE_SERVICE_ACCOUNT_KEY` | Firebase service account JSON (shared) |
+| `FIREBASE_PROJECT_ID` | Firebase project ID (`aexyn-site`) |
+| `FIREBASE_SERVICE_ACCOUNT_KEY` | Firebase service account JSON |
+
+**Note**: Only 2 secrets needed! Uses single project with multiple hosting sites.
 
 ## 📁 Key Files
 
@@ -81,15 +82,16 @@ npx firebase hosting:sites:list
 
 ## ⚡ Quick Setup Checklist
 
-- [ ] Create two Firebase projects (`aexyn-site`, `aexyn-site-dev`)
-- [ ] Update `.firebaserc` with both project IDs
+- [ ] Create Firebase project (`aexyn-site`)
+- [ ] Create two hosting sites (`aexyn-site`, `aexyn-site-dev`)
+- [ ] Configure hosting targets in `.firebaserc`
 - [ ] Generate service account key
-- [ ] Add GitHub secrets (`FIREBASE_PROJECT_ID`, `FIREBASE_DEV_PROJECT_ID`, `FIREBASE_SERVICE_ACCOUNT_KEY`)
+- [ ] Add GitHub secrets (`FIREBASE_PROJECT_ID`, `FIREBASE_SERVICE_ACCOUNT_KEY`)
 - [ ] Install dependencies: `npm install`
 - [ ] Test builds: `npm run build:dev` and `npm run build:prod`
 - [ ] Push to main branch → triggers production deployment
 - [ ] Push to dev branch → triggers development deployment
-- [ ] Verify both environments work
+- [ ] Verify both sites work
 
 ## 🚀 CI/CD Features
 
