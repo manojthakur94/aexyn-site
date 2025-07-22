@@ -2,17 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Aexyn</title>
-  <!-- Base URL is set dynamically via config.js -->
-  <script src="../js/config.js"></script>
-  <link rel="icon" href="../images/fav_icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services | Aexyn</title>
+<!-- Base URL is set dynamically via config.js -->
+<script src="../js/config.js"></script>
+<link rel="icon" href="../images/fav_icon.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+ 
 </head>
-<body>
-  <h1>Services Page</h1>
-  <p>This page will be developed with service offerings.</p>
+<body >
+  <header class="header">
+  <div class="cm-header defaultHeader">
+      <div class="container">
+          <div class="header-flex">
+              <div class="logo-col">
+                  <a href="../">
+                      <img src="../images/Aexyn_white_logo.png" width="150" alt="Aexyn">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <div class="menuClose"><span></span></div>
+                  <ul>
+                      <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
+                      <li><a href="../">Home</a></li>
+                      <li class="has-children">
+                          <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Services</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>AI & DATA ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="#">AI Consulting & Transformation</a></li>
+                                                          <li><a href="#">LLM-based Apps & GPT Integration</a></li>
+                                                          <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                          <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
+                                                          <li><a href="#">Custom AI Solution Development</a></li>
+                                                          <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>PRODUCT ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="../services/digital-product-development/">Digital Product and Platform Development</a></li>
+                                                          <li><a href="#">Web and Mobile App Development</a></li>
+                                                          <li><a href="#">IoT Development</a></li>
+                                                          <li><a href="#">AR Development</a></li>
+                                                          <li><a href="#">Cloud & DevOps</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>EXPERIENCE & GROWTH</strong>
+                                                      <ul>
+                                                          <li><a href="#">Product Discovery and Design Sprints</a></li>
+                                                          <li><a href="#">Data-Driven UX/UI</a></li>
+                                                          <li><a href="#">Rapid Prototyping</a></li>
+                                                          <li><a href="#">Wireframes and Visual Designs</a></li>
+                                                          <li><a href="#">UI/UX</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="has-children industry_menu">
+                          <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Industries</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-12">
+                                              <ul>
+                                                  <li>
+                                                      <ul>
+                                                          <li><a href="#">Fintech</a></li>
+                                                          <li><a href="#">Healthcare</a></li>
+                                                          <li><a href="#">Retail & E-commerce</a></li>
+                                                          <li><a href="#">EdTech</a></li>
+                                                          <li><a href="#">Manufacturing</a></li>
+                                                          <li><a href="#">Mobility</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li><a href="../case-studies">Case Studies</a></li>
+                      <li><a href="../blog">Blogs</a></li>
+                      <li><a href="../about-us">About Us</a></li>
+                  </ul>
+              </nav>
+              <div class="header-right-col">
+                  <div class="btn-grid">
+                      <div class="btn-item">
+                          <a href="../contact-us" class="cm-btn">
+                              <span class="btn-text">Contact Us</span>
+                              <span class="btn-icon"></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="menuTrigger"><span></span><span></span><span></span></div>
+          </div>
+      </div>
+  </div>
+</header> 
+  
+  <div class="layout" data-scroll-container>
+    <div class="body-container-wrapper">
+      
+            <section class="accentColor2 text-center simple_banner">
+                <div class="container">
+                    <div class="small_container">
+                        <span class="badge">Services</span>
+                        <h1>Our <span class="highlighted">Services</span></h1>
+                        <h5>Comprehensive technology solutions to accelerate your digital transformation journey.</h5>
+                    </div>
+                </div>
+            </section>
+            <section class="accentColor1">
+                <div class="container">
+                    <h1>Services Page</h1>
+                    <p>This page will be developed with service offerings.</p>
+                </div>
+            </section>
+        
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="cm-footer">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-logo">
+                  <a href="../">
+                      <img src="../images/Aexyn_white_logo.png" alt="Aexyn">
+                  </a>
+                  <div class="social-icons">
+                      <h4>Social</h4>
+                      <ul>
+                          <li>
+                              <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Services</a>
+                          <ul>
+                              <li><a href="#">AI Agent</a></li>
+                              <li><a href="#">Automation</a></li>
+                              <li><a href="#">API Integration</a></li>
+                              <li><a href="#">IT Services</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Industries</a>
+                          <ul>
+                              <li><a href="#">Fintech</a></li>
+                              <li><a href="#">Healthcare</a></li>
+                              <li><a href="#">Retail & E-commerce</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">About us</a>
+                          <ul>
+                              <li><a href="../about-us">About</a></li>
+                              <li><a href="../blog">Blogs</a></li>
+                              <li><a href="../contact-us">Contact Us</a></li>
+                              <li><a href="../case-studies">Case Studies</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom accentColor1">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
+              <div class="quick_links">
+                  <ul>
+                      <li><a href="../about-us">About Us</a></li>
+                      <li><a href="../services">Services</a></li>
+                      <li><a href="../industries">Industries</a></li>
+                      <li><a href="../blog">Blog</a></li>
+                      <li><a href="../contact-us">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/components/blog-loader.js"></script>
+ 
 </body>
-</html>
+</html> 

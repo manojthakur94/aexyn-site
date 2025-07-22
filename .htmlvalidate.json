@@ -1,0 +1,16 @@
+{
+  "extends": ["html-validate:recommended"],
+  "files": {
+    "*.html": {
+      "exclude": [
+        "templates/**/*.html",
+        "components/**/*.html", 
+        "pages/**/*.html"
+      ]
+    }
+  },
+  "rules": {
+    "void-style": "omit",
+    "no-trailing-whitespace": "off"
+  }
+} 

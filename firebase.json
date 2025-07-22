@@ -1,0 +1,66 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "build.js",
+      "build-site.js",
+      "scripts/**",
+      "components/**",
+      "templates/**",
+      "pages/**",
+      "package.json",
+      "package-lock.json",
+      "README.md",
+      "REFACTOR-SUMMARY.md",
+      ".github/**"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "rewrites": [
+      {
+        "source": "/blog",
+        "destination": "/blog/index.html"
+      },
+      {
+        "source": "/services",
+        "destination": "/services/index.html"
+      },
+      {
+        "source": "/Industries",
+        "destination": "/Industries/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|mp4)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
+} 

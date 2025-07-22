@@ -2,812 +2,330 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<!--
--->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web App Development || Aexyn</title>
-  <!-- Base URL is set dynamically via config.js -->
-  <script src="../../js/config.js"></script>
-  <link rel="icon" href="images/fav_icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web Development | Aexyn</title>
+<!-- Base URL is set dynamically via config.js -->
+<script src="../../js/config.js"></script>
+<link rel="icon" href="../../images/fav_icon.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+ 
 </head>
-<body>
-
-    
- <header class="header">
-    <div class="cm-header defaultHeader">
-        <div class="container">
-            <div class="header-flex">
-                <div class="logo-col">
-                    <a href="/">
-                        <img src="images/Aexyn_white_logo.png" width="150" alt="Aexyn">
+<body >
+  <header class="header">
+  <div class="cm-header defaultHeader">
+      <div class="container">
+          <div class="header-flex">
+              <div class="logo-col">
+                  <a href="../../">
+                      <img src="../../images/Aexyn_white_logo.png" width="150" alt="Aexyn">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <div class="menuClose"><span></span></div>
+                  <ul>
+                      <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
+                      <li><a href="../../">Home</a></li>
+                      <li class="has-children">
+                          <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Services</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>AI & DATA ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="#">AI Consulting & Transformation</a></li>
+                                                          <li><a href="#">LLM-based Apps & GPT Integration</a></li>
+                                                          <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                          <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
+                                                          <li><a href="#">Custom AI Solution Development</a></li>
+                                                          <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>PRODUCT ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="../../services/digital-product-development/">Digital Product and Platform Development</a></li>
+                                                          <li><a href="#">Web and Mobile App Development</a></li>
+                                                          <li><a href="#">IoT Development</a></li>
+                                                          <li><a href="#">AR Development</a></li>
+                                                          <li><a href="#">Cloud & DevOps</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>EXPERIENCE & GROWTH</strong>
+                                                      <ul>
+                                                          <li><a href="#">Product Discovery and Design Sprints</a></li>
+                                                          <li><a href="#">Data-Driven UX/UI</a></li>
+                                                          <li><a href="#">Rapid Prototyping</a></li>
+                                                          <li><a href="#">Wireframes and Visual Designs</a></li>
+                                                          <li><a href="#">UI/UX</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="has-children industry_menu">
+                          <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Industries</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-12">
+                                              <ul>
+                                                  <li>
+                                                      <ul>
+                                                          <li><a href="#">Fintech</a></li>
+                                                          <li><a href="#">Healthcare</a></li>
+                                                          <li><a href="#">Retail & E-commerce</a></li>
+                                                          <li><a href="#">EdTech</a></li>
+                                                          <li><a href="#">Manufacturing</a></li>
+                                                          <li><a href="#">Mobility</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li><a href="../../case-studies">Case Studies</a></li>
+                      <li><a href="../../blog">Blogs</a></li>
+                      <li><a href="../../about-us">About Us</a></li>
+                  </ul>
+              </nav>
+              <div class="header-right-col">
+                  <div class="btn-grid">
+                      <div class="btn-item">
+                          <a href="../../contact-us" class="cm-btn">
+                              <span class="btn-text">Contact Us</span>
+                              <span class="btn-icon"></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="menuTrigger"><span></span><span></span><span></span></div>
+          </div>
+      </div>
+  </div>
+</header> 
+  
+  <div class="layout" data-scroll-container>
+    <div class="body-container-wrapper">
+      <section class="bannerV2 accentColor2" style="background-image:url(../../images/web_apps.jpeg);">
+    <div class="container">
+        <div class="bannerV2_content">
+            <h1>Web Application Development</h1>
+            <div class="ban_desc">
+                We build modern, scalable web applications using cutting-edge technologies. From responsive websites to complex web platforms, we deliver solutions that drive business growth.
+            </div>
+            <div class="btn-grid">
+                <div class="btn-item">
+                    <a href="../../contact-us" class="cm-btn btn2">
+                        <span class="btn-text">Discuss Your Web Project</span>
+                        <span class="btn-icon"></span>
                     </a>
                 </div>
-                <nav class="navigation">
-                    <div class="menuClose"><span></span></div>
-                    <ul>
-                        <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
-                        <li><a href="/">Home</a></li>
-                        <li class="has-children">
-                            <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
-                            <div class="megaMenu">
-                                <div class="container">
-                                    <div class="megaMenuBg">
-                                        <h4>Services</h4>
-                                        <div class="custom-row">
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>AI & DATA ENGINEERING</strong>
-                                                        <ul>
-                                                            <li><a href="#">AI Consulting & Transformation</a></li>
-                                                            <li><a href="#">LLM-based Apps & GPT Integration</a></li>
-                                                            <li><a href="#">Machine Learning & Predictive Modeling</a></li>
-                                                            <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
-                                                            <li><a href="#">Custom AI Solution Development</a></li>
-                                                            <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
-                                                        </ul>
-                                                    </li>
+            </div>
+        </div> 
+    </div>
+</section>
 
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>PRODUCT ENGINEERING</strong>
-                                                        <ul>
-                                                            <li><a href="#">Digital Product  and Platform Development</a></li>
-                                                            <li><a href="#">Web and  Mobile App Development</a></li>
-                                                            <li><a href="#">IoT Development</a></li>
-                                                            <li><a href="#">AR Development</a></li>
-                                                            <li><a href="#">Cloud & DevOps</a></li>
-                                                        </ul>
-                                                    </li>
+<section class="accentColor1">
+    <div class="container">
+        <div class="caption">
+            <span class="badge">Overview</span>
+            <p>
+                We develop powerful web applications that transform your business operations and enhance customer engagement. Our web solutions are designed to be fast, secure, and scalable—delivering exceptional user experiences across all devices and browsers.<br><br>
 
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>EXPERIENCE & GROWTH</strong>
-                                                        <ul>
-                                                            <li><a href="#">Product Discovery and Design Sprints</a></li>
-                                                            <li><a href="#">Data-Driven UX/UI</a></li>
-                                                            <li><a href="#">Rapid Prototyping</a></li>
-                                                            <li><a href="#">Wireframes and Visual Designs</a></li>
-                                                            <li><a href="#">UI/UX</a></li>
-                                                        </ul>
-                                                    </li>
+                From responsive websites to complex enterprise web platforms, we leverage modern frameworks like React, Angular, and Vue.js to create solutions that meet your specific business needs. Our comprehensive approach includes frontend development, backend architecture, database design, and deployment optimization.<br><br>
 
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="has-children industry_menu">
-                            <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
-                            <div class="megaMenu">
-                                <div class="container">
-                                    <div class="megaMenuBg">
-                                        <h4>Industries</h4>
-                                        <div class="custom-row">
-                                            <div class="custom-col-12">
-                                                <ul>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="#">Fintech</a></li>
-                                                            <li><a href="#">Healthcare</a></li>
-                                                            <li><a href="#">Retail & E-commerce</a></li>
-                                                            <li><a href="#">EdTech</a></li>
-                                                            <li><a href="#">Manufacturing</a></li>
-                                                            <li><a href="#">Mobility</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="/case-studies">Case Studies</a></li>
-                        <li><a href="/blog">Blogs</a></li>
-                        <li><a href="/about-us">About Us</a></li>
-                    </ul>
-                </nav>
-                <div class="header-right-col">
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Contact Us</span>
-                                <span class="btn-icon"></span>
-                            </a>
-                        </div>
+                Partner with Aexyn to create web experiences that drive conversions, improve efficiency, and generate measurable business results in today's digital landscape.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="solutions accentColor2">
+    <div class="container">
+        <div class="section_header">
+            <span class="badge">Our Services</span>
+            <h2>Web Solutions for Every Business Need</h2>
+        </div>
+        <div class="custom-row">
+            <div class="custom-col-3 solutionItem wow slideInUp" data-wow-delay="0.2s">
+                <div class="solutionCard">
+                    <div class="solutionCardInner">
+                        <div class="iconHolder"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4 class="title">Custom Web Applications</h4>
+                        <p class="desc">Tailored web solutions built with modern frameworks for optimal performance and user experience.</p>
                     </div>
                 </div>
-                <div class="menuTrigger"><span></span><span></span><span></span></div>
+            </div>
+            <div class="custom-col-3 solutionItem wow slideInUp" data-wow-delay="0.4s">
+                <div class="solutionCard">
+                    <div class="solutionCardInner">
+                        <div class="iconHolder"><i class="fa-solid fa-shopping-cart"></i></div>
+                        <h4 class="title">E-commerce Platforms</h4>
+                        <p class="desc">Robust online stores with secure payment processing and inventory management systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-col-3 solutionItem wow slideInUp" data-wow-delay="0.6s">
+                <div class="solutionCard">
+                    <div class="solutionCardInner">
+                        <div class="iconHolder"><i class="fa-solid fa-globe"></i></div>
+                        <h4 class="title">Progressive Web Apps</h4>
+                        <p class="desc">Modern web applications that provide native app-like experiences across all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-col-3 solutionItem wow slideInUp" data-wow-delay="0.8s">
+                <div class="solutionCard">
+                    <div class="solutionCardInner">
+                        <div class="iconHolder"><i class="fa-solid fa-cogs"></i></div>
+                        <h4 class="title">API Development</h4>
+                        <p class="desc">RESTful APIs and microservices architecture for seamless system integrations.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-  </header>
+</section>
 
-  <div class="layout" data-scroll-container>
-    <div class="body-container-wrapper">
-
-        <section class="bannerV2 accentColor2" style="background-image:url(images/web_apps.jpeg);">
-            <div class="container">
-                <div class="bannerV2_content">
-                    <h1>Web App Development</h1>
-                    <div class="ban_desc">
-                        We build high-performance web applications tailored to your business needs. From concept to launch, we deliver scalable, user-friendly solutions across all platforms.
-                    </div>
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn btn2">
-                                <span class="btn-text">Get Free Consultation</span>
-                                <span class="btn-icon"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </section>
-        <section class="accentColor1">
-            <div class="container">
-                <div class="caption">
-                    <span class="badge">Overview</span>
-                    <p>We specialize in designing and developing high-performance web applications that are not only robust and scalable but also fast, secure, and intuitively user-friendly. <br><br>Our engineering teams combine modern development frameworks, best-in-class coding practices, and a deep understanding of user behavior to craft digital solutions that stand the test of time and traffic. Whether you're an early-stage startup looking to build your MVP or a large-scale enterprise seeking to modernize and scale your digital infrastructure, we provide tailored, end-to-end web application development services that align precisely with your unique business goals. <br><br>From initial strategy and UX design to backend development, testing, and deployment, we ensure that every layer of your application is optimized for performance, reliability, and growth. Our custom-built platforms are engineered to help you launch faster, operate more efficiently, and deliver exceptional experiences to your users—every step of the way.</p>
+<section class="book_demo accentColor2">
+    <div class="container">
+        <div class="demo-card max-width-800">
+            <h3>Ready to Build Your Web Application?</h3>
+            <p>Let's discuss how we can create a powerful web solution that drives your business forward with modern technology and exceptional user experience.</p>
+            <div class="btn-grid">
+                <div class="btn-item">
+                    <a href="../../contact-us" class="cm-btn">
+                        <span class="btn-text">Talk to a Web Expert</span>
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                            </svg>
+                        </span>
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <section class="services-section accentColor2">
-            <div class="container">
-                <div class="section_header">
-                    <span class="badge">Our services</span>
-                    <h2>Building Web Experiences That Matter</h2>
-                </div>
-                <div class="swiper-container services-slider darkcard-grid">
-                    <div class="swiperPagination">
-                        <div class="arrowColumn">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">Custom Web Application Development</h4>
-                                        <p class="desc">Tailored web apps designed to solve unique business challenges — built for scalability, performance, and security.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">eCommerce Web Applications</h4>
-                                        <p class="desc">We build feature-rich online stores with seamless checkout, payment integration, and inventory management for high conversions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div  class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">Progressive Web Applications (PWA)</h4>
-                                        <p class="desc">Cross-platform apps that offer native-like performance, offline access, and fast load times directly in the browser.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div  class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title"> Single Page Applications (SPA)</h4>
-                                        <p class="desc">High-speed, dynamic user experiences using frameworks like React, Angular, or Vue — built for modern workflows and tools.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div  class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">Enterprise Portals & Internal Tools</h4>
-                                        <p class="desc">Centralized, role-based systems that boost productivity and streamline data access across departments.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">Headless Web Development</h4>
-                                        <p class="desc">Decoupled frontends powered by APIs and CMSs like Strapi or Contentful, enabling ultra-fast, flexible digital experiences.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">CMS-Driven Web Applications</h4>
-                                        <p class="desc">User-friendly platforms built with WordPress, Webflow, or headless CMS — giving marketing teams full control over content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">SaaS Web Application Development</h4>
-                                        <p class="desc">We help you design, build, and launch full-scale Software-as-a-Service (SaaS) platforms — from MVP to enterprise-ready.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                         <div class="swiper-slide">
-                            <div class="solutionItem">
-                                <div class="solutionCard">
-                                    <div class="solutionCardInner">
-                                        <div class="iconHolder">
-                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="title">Web Portals for Customer & Vendor Self-Service</h4>
-                                        <p class="desc">Build secure, interactive portals for customers, vendors, or partners to access accounts, services, and tools.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="tech-stack accentColor1">
-            <div class="container">
-                <div class="section_header">
-                    <span class="badge">Tech Stack to Power Modern Web</span>
-                    <h2>We deliver fast & reliable web apps using <br><span class="highlighted">high-performance front-end and back-end technologies.</span></h2>
-                </div>
-                <div class="tabber_nav">
-                    <button class="active" data-target="#tab_1">Frontend</button>
-                    <button data-target="#tab_2">Backend</button>
-                    <button data-target="#tab_3">Data</button>
-                </div>
-                <div class="tech_tab active_tab " id="tab_1">
-                    <div class="swiper-container tech-stack-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/React.png" width="512" alt="React">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Next.png" width="512" alt="Angular">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Angular.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Joomla.png" width="512" alt="Joomla">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/MySql.png" width="512" alt="MySql">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Wordpress.png" width="512" alt="Wordpress">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="arrowStatic">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tech_tab " id="tab_2">
-                    <div class="swiper-container tech-stack-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/React.png" width="512" alt="React">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Angular.png" width="512" alt="Angular">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Joomla.png" width="512" alt="Joomla">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/MySql.png" width="512" alt="MySql">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Wordpress.png" width="512" alt="Wordpress">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="arrowStatic">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tech_tab " id="tab_3">
-                    <div class="swiper-container tech-stack-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tech_card">
-                                    <img src="images/Node.png" width="512" alt="Node">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="arrowStatic">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section-slides accentColor2 padding-150-0 caseStudySection">
-            <div class="container">
-                <div class="section_header">
-                    <h2>We Work with Clients Developing <br>Industry-Leading Solutions</h2>
-                </div>
-                <div class="case-slides">
-                    <div class="case-slide">
-                        <div class="custom-case-flex">
-                            <div class="caseStudy_content">
-                                <div class="caseLogo">
-                                    <img src="images/Aexyn_white_logo.png" alt="Aexyn">
-                                </div>
-                                <div class="caseDesc"> We developed a voice-assistant app optimized for bluetooth wearables for social media experiences on the go. Results?</div>
-                                <div class="case_stats">
-                                    <div class="case_stats_item">
-                                        <h4>$1 Million</h4>
-                                        <p class="stats_text">Funding Received</p>
-                                    </div>
-                                    <div class="case_stats_item">
-                                        <h4>50K+</h4>
-                                        <p class="stats_text">Mobile App Downloads</p>
-                                    </div>
-                                </div>
-                                <div class="btn-grid">
-                                    <div class="btn-item">
-                                        <a href="/contact-us" class="cm-btn">
-                                            <span class="btn-text">Read Case Study</span>
-                                            <span class="btn-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="caseStudy_image">
-                                <img src="images/hero.jpg" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-slide">
-                        <div class="custom-case-flex">
-                            <div class="caseStudy_content">
-                                <div class="caseLogo">
-                                    <img src="images/Aexyn_white_logo.png" alt="Aexyn">
-                                </div>
-                                <div class="caseDesc"> We developed a voice-assistant app optimized for bluetooth wearables for social media experiences on the go. Results?</div>
-                                <div class="case_stats">
-                                    <div class="case_stats_item">
-                                        <h4>$1 Million</h4>
-                                        <p class="stats_text">Funding Received</p>
-                                    </div>
-                                    <div class="case_stats_item">
-                                        <h4>50K+</h4>
-                                        <p class="stats_text">Mobile App Downloads</p>
-                                    </div>
-                                </div>
-                                <div class="btn-grid">
-                                    <div class="btn-item">
-                                        <a href="/contact-us" class="cm-btn">
-                                            <span class="btn-text">Read Case Study</span>
-                                            <span class="btn-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="caseStudy_image">
-                                <img src="images/case1.jpg" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-slide">
-                        <div class="custom-case-flex">
-                            <div class="caseStudy_content">
-                                <div class="caseLogo">
-                                    <img src="images/Aexyn_white_logo.png" alt="Aexyn">
-                                </div>
-                                <div class="caseDesc"> We developed a voice-assistant app optimized for bluetooth wearables for social media experiences on the go. Results?</div>
-                                <div class="case_stats">
-                                    <div class="case_stats_item">
-                                        <h4>$1 Million</h4>
-                                        <p class="stats_text">Funding Received</p>
-                                    </div>
-                                    <div class="case_stats_item">
-                                        <h4>50K+</h4>
-                                        <p class="stats_text">Mobile App Downloads</p>
-                                    </div>
-                                </div>
-                                <div class="btn-grid">
-                                    <div class="btn-item">
-                                        <a href="/contact-us" class="cm-btn">
-                                            <span class="btn-text">Read Case Study</span>
-                                            <span class="btn-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="caseStudy_image">
-                                <img src="images/post-image-1.jpg" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section accentColor4">
-            <div class="container">
-                <div class="section_header">
-                    <span class="badge">FAQ</span>
-                    <h2>General FAQs</span></h2>
-                </div>
-                <div class="faq_grid">
-                    <div class="faq_item">
-                        <div class="faq_card">
-                            <div class="faq_heading">
-                                What technologies do you use for web app development?
-                                <span class="ct_icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg></span>
-                            </div>
-                            <div class="faq_body">We use frameworks like React.js, Angular, Next.js, and backends like Node.js, java and Laravel based on the project requirements.</div>
-                        </div>
-                    </div>
-                    <div class="faq_item">
-                        <div class="faq_card">
-                            <div class="faq_heading">
-                                Do you develop SEO-friendly web applications?
-                                <span class="ct_icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg></span>
-                            </div>
-                            <div class="faq_body">Yes, we implement best practices for server-side rendering, metadata, and performance to ensure your site ranks well on search engines.</div>
-                        </div>
-                    </div>
-                    <div class="faq_item">
-                        <div class="faq_card">
-                            <div class="faq_heading">
-                                Will my website be mobile-friendly?
-                                <span class="ct_icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg></span>
-                            </div>
-                            <div class="faq_body">Yes, websites we build are fully responsive and optimized for mobile devices.</div>
-                        </div>
-                    </div>
-                    <div class="faq_item">
-                        <div class="faq_card">
-                            <div class="faq_heading">
-                                Can I update the website myself after it's built?
-                                <span class="ct_icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg></span>
-                            </div>
-                            <div class="faq_body">Absolutely. We build sites with user-friendly CMS platforms like WordPress, HubSpot, or Webflow, so you can manage content easily.</div>
-                        </div>
-                    </div>
-                    <div class="faq_item">
-                        <div class="faq_card">
-                            <div class="faq_heading">
-                                Do you provide website hosting and domain registration?
-                                <span class="ct_icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg></span>
-                            </div>
-                            <div class="faq_body">We can guide you through hosting and domain setup, or handle it fully based on your preferences.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="blog-section accentColor1">
-            <div class="container">
-                <div class="section_header">
-                    <div class="custom-sec-flex">
-                        <div class="sec_title_col">
-                            <h2><span class="highlighted">Aexyn</span> Insights</h2>
-                        </div>
-                        <div class="sec_btn_col">
-                            <a href="/blog" class="cm-btn">
-                                <span class="btn-text">View All</span>
-                                <span class="btn-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="custom-row row-gap-30 blogGrid" id="recent-posts"></div> -->
-                 <div class="custom-row row-gap-30 blogGrid" id="posts-AI"  data-tag="Web"></div>
-            </div>
-        </section>
-
-        <section class="book_demo accentColor2">
-            <div class="container">
-                <div class="demo-card max-width-800">
-                    <h3>Ready to Transform Your Business with Web Technology?</h3>
-                    <p>Reach out today and get personalized answers from professionals who are passionate about turning your vision into a high-performing digital solution</p>
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Get Free Consultation</span>
-                                <span class="btn-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
+        </div>
+    </div>
+</section> 
     </div>
   </div>
 
   <footer class="footer">
-    <div class="cm-footer">
-        <div class="container">
-            <div class="footer-flex">
-                <div class="footer-logo">
-                    <a href="/">
-                        <img src="images/Aexyn_white_logo.png" alt="Aexyn">
-                    </a>
-                    <div class="social-icons">
-                        <h4>Social</h4>
-                        <ul>
-                            <li>
-                                <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">Services</a>
-                            <ul>
-                                <li><a href="#">AI Agent</a></li>
-                                <li><a href="#">Automation</a></li>
-                                <li><a href="#">API Inegration</a></li>
-                                <li><a href="#">IT Services</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">Industries</a>
-                            <ul>
-                                <li><a href="#">Industry 1</a></li>
-                                <li><a href="#">Industry 1</a></li>
-                                <li><a href="#">Industry 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">About us</a>
-                            <ul>
-                                <li><a href="/about-us">About</a></li>
-                                <li><a href="/blog">Blogs</a></li>
-                                <li><a href="/contact-us">Contact Us</a></li>
-                                <li><a href="/case-studies">Case Studies</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom accentColor1">
-        <div class="container">
-            <div class="footer-flex">
-                <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
-                <div class="quick_links">
-                    <ul>
-                        <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li><a href="/industries">Industries</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact-us">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-  </footer>
-
- 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <div class="cm-footer">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-logo">
+                  <a href="../../">
+                      <img src="../../images/Aexyn_white_logo.png" alt="Aexyn">
+                  </a>
+                  <div class="social-icons">
+                      <h4>Social</h4>
+                      <ul>
+                          <li>
+                              <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Services</a>
+                          <ul>
+                              <li><a href="#">AI Agent</a></li>
+                              <li><a href="#">Automation</a></li>
+                              <li><a href="#">API Integration</a></li>
+                              <li><a href="#">IT Services</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Industries</a>
+                          <ul>
+                              <li><a href="#">Fintech</a></li>
+                              <li><a href="#">Healthcare</a></li>
+                              <li><a href="#">Retail & E-commerce</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">About us</a>
+                          <ul>
+                              <li><a href="../../about-us">About</a></li>
+                              <li><a href="../../blog">Blogs</a></li>
+                              <li><a href="../../contact-us">Contact Us</a></li>
+                              <li><a href="../../case-studies">Case Studies</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom accentColor1">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
+              <div class="quick_links">
+                  <ul>
+                      <li><a href="../../about-us">About Us</a></li>
+                      <li><a href="../../services">Services</a></li>
+                      <li><a href="../../industries">Industries</a></li>
+                      <li><a href="../../blog">Blog</a></li>
+                      <li><a href="../../contact-us">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-<script src="js/main.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/components/blog-loader.js"></script>
+ 
 </body>
-</html>
+</html> 

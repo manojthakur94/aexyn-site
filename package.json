@@ -1,0 +1,33 @@
+{
+  "name": "aexyn-site",
+  "version": "1.0.0",
+  "description": "Aexyn corporate website with component-based architecture",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build-site.js",
+    "build:dev": "cross-env NODE_ENV=development node build-site.js",
+    "build:prod": "cross-env NODE_ENV=production node build-site.js",
+    "serve": "npx http-server . -p 3000 -c-1",
+    "clean": "node scripts/clean.js",
+    "dev": "npm run build:dev && npm run serve",
+    "watch": "nodemon --watch components --watch templates --watch pages --ext html,js --exec \"npm run build:dev\"",
+    "firebase:serve": "npm run build && firebase serve",
+    "firebase:deploy": "npm run build:prod && firebase deploy",
+    "firebase:deploy:dev": "npm run build:dev && firebase deploy --project dev",
+    "ci:build": "npm run build",
+    "postbuild": "echo 'Build completed successfully'"
+  },
+  "keywords": ["website", "components", "static-site"],
+  "author": "Aexyn",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "firebase-tools": "^13.0.0",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+} 
