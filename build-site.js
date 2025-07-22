@@ -219,7 +219,7 @@ function generateBlogPages() {
                                     <article class="post-content">
                                         <h2>${blog.title}</h2>
                                         <p>${blog.summary}</p>
-                                        <p><em>Full blog content would be loaded here from a separate content management system or markdown files.</em></p>
+                                        ${blog.content || '<p><em>Content coming soon...</em></p>'}
                                     </article>
                                     <a href="/blog" class="cm-btn btn2 backToBlog">
                                         <span class="btn-icon"></span>
