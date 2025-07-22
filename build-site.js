@@ -2,6 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const SiteBuilder = require('./build.js');
 
+// Environment configuration
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const BASE_URL = process.env.BASE_URL || '';
+
+console.log(`🔧 Building for environment: ${NODE_ENV}`);
+console.log(`🌐 Base URL: ${BASE_URL || 'relative paths'}`);
+
 // Initialize the builder
 const builder = new SiteBuilder();
 
@@ -17,7 +24,21 @@ function loadPageContent(pageName) {
 
 // Function to replace basePath in content loaded from files
 function processPageContent(content, basePath) {
-    return content.replace(/\{\{basePath\}\}/g, basePath);
+    let processedContent = content.replace(/\{\{basePath\}\}/g, basePath);
+    
+    // Replace BASE_URL placeholders if environment variable is set
+    if (BASE_URL) {
+        processedContent = processedContent.replace(/\{\{baseUrl\}\}/g, BASE_URL);
+        // Also replace relative paths with absolute URLs for assets in production
+        if (NODE_ENV === 'production') {
+            processedContent = processedContent.replace(/href="([^"]*\.(css|js))"/g, `href="${BASE_URL}/$1"`);
+            processedContent = processedContent.replace(/src="([^"]*\.(js|jpg|jpeg|png|gif|svg|mp4))"/g, `src="${BASE_URL}/$1"`);
+        }
+    } else {
+        processedContent = processedContent.replace(/\{\{baseUrl\}\}/g, '');
+    }
+    
+    return processedContent;
 }
 
 // Build configuration for all pages

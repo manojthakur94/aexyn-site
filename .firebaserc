@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "aexyn-site",
+    "prod": "aexyn-site",
+    "dev": "aexyn-site-dev"
+  },
+  "targets": {
+    "aexyn-site": {
+      "hosting": {
+        "production": ["aexyn-site"]
+      }
+    },
+    "aexyn-site-dev": {
+      "hosting": {
+        "development": ["aexyn-site-dev"]
+      }
+    }
+  }
+} 

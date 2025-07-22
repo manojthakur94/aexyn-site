@@ -6,6 +6,8 @@ class SiteBuilder {
         this.components = {};
         this.templates = {};
         this.basePath = './';
+        this.baseUrl = process.env.BASE_URL || '';
+        this.nodeEnv = process.env.NODE_ENV || 'development';
     }
 
     // Load a component from the components directory
@@ -84,13 +86,15 @@ class SiteBuilder {
         // Prepare variables for replacement
         const variables = {
             basePath,
+            baseUrl: this.baseUrl,
+            nodeEnv: this.nodeEnv,
             pageTitle,
             headerClass,
             bodyClass,
-            head: this.replacePlaceholders(head, { basePath, pageTitle, additionalHead }),
-            header: this.replacePlaceholders(header, { basePath, headerClass }),
-            footer: this.replacePlaceholders(footer, { basePath }),
-            scripts: this.replacePlaceholders(scripts, { basePath, additionalScripts }),
+            head: this.replacePlaceholders(head, { basePath, baseUrl: this.baseUrl, pageTitle, additionalHead }),
+            header: this.replacePlaceholders(header, { basePath, baseUrl: this.baseUrl, headerClass }),
+            footer: this.replacePlaceholders(footer, { basePath, baseUrl: this.baseUrl }),
+            scripts: this.replacePlaceholders(scripts, { basePath, baseUrl: this.baseUrl, additionalScripts }),
             content,
             additionalHead,
             additionalScripts
