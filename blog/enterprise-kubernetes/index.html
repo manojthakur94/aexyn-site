@@ -2,336 +2,295 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<!--
--->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise Kubernetes</title>
-  <!-- Base URL is set dynamically via config.js -->
-  <script src="../../js/config.js"></script>
-  <link rel="icon" href="images/fav_icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mastering Kubernetes in Enterprise Environments | Aexyn</title>
+<!-- Base URL is set dynamically via config.js -->
+<script src="../../js/config.js"></script>
+<link rel="icon" href="../../images/fav_icon.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+ 
 </head>
-<body>
-
-    
+<body >
   <header class="header">
-    <div class="cm-header defaultHeader">
-        <div class="container">
-            <div class="header-flex">
-                <div class="logo-col">
-                    <a href="/">
-                        <img src="images/Aexyn_white_logo.png" width="150" alt="Aexyn">
-                    </a>
-                </div>
-                <nav class="navigation">
-                    <div class="menuClose"><span></span></div>
-                    <ul>
-                        <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
-                        <li><a href="/">Home</a></li>
-                        <li class="has-children">
-                            <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
-                            <div class="megaMenu">
-                                <div class="container">
-                                    <div class="megaMenuBg">
-                                        <h4>Services</h4>
-                                        <div class="custom-row">
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>AI & DATA ENGINEERING</strong>
-                                                        <ul>
-                                                            <li><a href="#">AI Consulting & Transformation</a></li>
-                                                            <li><a href="#">LLM-based Apps & GPT Integration</a></li>
-                                                            <li><a href="#">Machine Learning & Predictive Modeling</a></li>
-                                                            <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
-                                                            <li><a href="#">Custom AI Solution Development</a></li>
-                                                            <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>PRODUCT ENGINEERING</strong>
-                                                        <ul>
-                                                            <li><a href="#">Digital Product  and Platform Development</a></li>
-                                                            <li><a href="#">Web and  Mobile App Development</a></li>
-                                                            <li><a href="#">IoT Development</a></li>
-                                                            <li><a href="#">AR Development</a></li>
-                                                            <li><a href="#">Cloud & DevOps</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>EXPERIENCE & GROWTH</strong>
-                                                        <ul>
-                                                            <li><a href="#">Product Discovery and Design Sprints</a></li>
-                                                            <li><a href="#">Data-Driven UX/UI</a></li>
-                                                            <li><a href="#">Rapid Prototyping</a></li>
-                                                            <li><a href="#">Wireframes and Visual Designs</a></li>
-                                                            <li><a href="#">UI/UX</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="has-children industry_menu">
-                            <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
-                            <div class="megaMenu">
-                                <div class="container">
-                                    <div class="megaMenuBg">
-                                        <h4>Industries</h4>
-                                        <div class="custom-row">
-                                            <div class="custom-col-12">
-                                                <ul>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="#">Fintech</a></li>
-                                                            <li><a href="#">Healthcare</a></li>
-                                                            <li><a href="#">Retail & E-commerce</a></li>
-                                                            <li><a href="#">EdTech</a></li>
-                                                            <li><a href="#">Manufacturing</a></li>
-                                                            <li><a href="#">Mobility</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="/case-studies">Case Studies</a></li>
-                        <li><a href="/blog">Blogs</a></li>
-                        <li><a href="/about-us">About Us</a></li>
-                    </ul>
-                </nav>
-                <div class="header-right-col">
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Contact Us</span>
-                                <span class="btn-icon"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="menuTrigger"><span></span><span></span><span></span></div>
-            </div>
-        </div>
-    </div>
-  </header>
-
+  <div class="cm-header defaultHeader">
+      <div class="container">
+          <div class="header-flex">
+              <div class="logo-col">
+                  <a href="../../">
+                      <img src="../../images/Aexyn_white_logo.png" width="150" alt="Aexyn">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <div class="menuClose"><span></span></div>
+                  <ul>
+                      <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
+                      <li><a href="../../">Home</a></li>
+                      <li class="has-children">
+                          <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Services</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>AI & DATA ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="#">AI Consulting & Transformation</a></li>
+                                                          <li><a href="#">LLM-based Apps & GPT Integration</a></li>
+                                                          <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                          <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
+                                                          <li><a href="#">Custom AI Solution Development</a></li>
+                                                          <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>PRODUCT ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="../../services/digital-product-development/">Digital Product and Platform Development</a></li>
+                                                          <li><a href="#">Web and Mobile App Development</a></li>
+                                                          <li><a href="#">IoT Development</a></li>
+                                                          <li><a href="#">AR Development</a></li>
+                                                          <li><a href="#">Cloud & DevOps</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>EXPERIENCE & GROWTH</strong>
+                                                      <ul>
+                                                          <li><a href="#">Product Discovery and Design Sprints</a></li>
+                                                          <li><a href="#">Data-Driven UX/UI</a></li>
+                                                          <li><a href="#">Rapid Prototyping</a></li>
+                                                          <li><a href="#">Wireframes and Visual Designs</a></li>
+                                                          <li><a href="#">UI/UX</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="has-children industry_menu">
+                          <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Industries</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-12">
+                                              <ul>
+                                                  <li>
+                                                      <ul>
+                                                          <li><a href="#">Fintech</a></li>
+                                                          <li><a href="#">Healthcare</a></li>
+                                                          <li><a href="#">Retail & E-commerce</a></li>
+                                                          <li><a href="#">EdTech</a></li>
+                                                          <li><a href="#">Manufacturing</a></li>
+                                                          <li><a href="#">Mobility</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li><a href="../../case-studies">Case Studies</a></li>
+                      <li><a href="../../blog">Blogs</a></li>
+                      <li><a href="../../about-us">About Us</a></li>
+                  </ul>
+              </nav>
+              <div class="header-right-col">
+                  <div class="btn-grid">
+                      <div class="btn-item">
+                          <a href="../../contact-us" class="cm-btn">
+                              <span class="btn-text">Contact Us</span>
+                              <span class="btn-icon"></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="menuTrigger"><span></span><span></span><span></span></div>
+          </div>
+      </div>
+  </div>
+</header> 
+  
   <div class="layout" data-scroll-container>
     <div class="body-container-wrapper">
-        
-
-        <section class="bannerV2 accentColor2 post_banner" style="background-image:url(images/mastering_kub.jpeg);" >
-            <div class="container">
-                <div class="small_container">
-                    <span class="badge">Blog</span>
-                    <h1>Mastering Kubernetes in Enterprise Environments</h1>
-                    <div class="post-meta">
-                        <span class="date">July 14, 2022</span>
-                        <span class="author">by Ankit</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="blog_post_content accentColor4">
-            <div class="container">
-                <div class="blog_post_flex">
-                    <main class="main-content">
-                        <div class="post-body-byline">
-                            <div class="tags">
-                                <a href="/blog/?tag=CloudAndDevOps" class="badge">CloudAndDevOps</a>
-                          
+      
+                    <section class="bannerV2 accentColor2 post_banner" style="background-image:url(images/mastering_kub.jpeg);">
+                        <div class="container">
+                            <div class="small_container">
+                                <span class="badge">Blog</span>
+                                <h1>Mastering Kubernetes in Enterprise Environments</h1>
+                                <div class="post-meta">
+                                    <span class="date">Jul 14, 2022</span>
+                                    <span class="author">by Ankit</span>
+                                </div>
                             </div>
                         </div>
-                        <article class="post-content">
-                         <h2 id="mastering-kubernetes-in-enterprise-environments">Mastering Kubernetes in Enterprise Environments</h2>
-                        <p>The debate is over. Kubernetes has won. It is the undisputed champion of container orchestration, the foundational operating system for the cloud-native world. Years ago, we talked about &quot;<a href="/blog/enterprise-microservices/">Why Enterprises are Moving to Microservices</a>&quot;; today, Kubernetes is the engine that powers that architecture at scale.</p>
-                        <p>But a new, more challenging phase has begun. Many organizations have successfully deployed their first few applications on Kubernetes, but now face a daunting chasm between running a simple cluster and operating a secure, multi-tenant, enterprise-grade platform. Getting started is one thing; mastering Kubernetes is another challenge entirely.</p>
-                        <p>True mastery isn&#39;t about memorizing <code>kubectl</code> commands. It&#39;s about solving the complex &quot;Day 2&quot; operational challenges that emerge when Kubernetes becomes mission-critical infrastructure. Here’s what it takes.</p>
-                        <h3 id="pillar-1-taming-the-complexity-beast">Pillar 1: Taming the Complexity Beast</h3>
-                        <p>Kubernetes is a masterpiece of distributed systems engineering, but that power comes with immense complexity. The learning curve is notoriously steep. Developers who were comfortable with virtual machines suddenly face a new world of Pods, Services, Ingresses, Persistent Volumes, and countless YAML configuration files.</p>
-                        <p><strong>The Enterprise Solution:</strong> You cannot expect every development team to become Kubernetes experts. The most successful organizations build a dedicated <strong>Platform Engineering</strong> or <strong>DevOps</strong> team. This team is responsible for building a paved road for developers. They create internal platforms, standardized templates (using tools like Helm), and CI/CD pipelines that abstract away the complexity, allowing developers to deploy their applications safely and efficiently without needing to be deep cluster administrators.</p>
-                        <h3 id="pillar-2-security-is-not-the-default">Pillar 2: Security is Not the Default</h3>
-                        <p>This is the most critical point: <strong>A default Kubernetes cluster is not secure.</strong> Failing to address security from day one is a recipe for disaster in any enterprise environment. Mastering Kubernetes means embedding security into every layer of the stack.</p>
-                        <ul>
-                        <li><strong>Role-Based Access Control (RBAC):</strong> This is your first line of defense. Implement the principle of least privilege meticulously. Developers should only have access to the specific namespaces and resources they need. Cluster-admin rights should be guarded fiercely.</li>
-                        <li><strong>Network Policies:</strong> By default, every pod in a cluster can talk to every other pod. This is a huge security risk. Network Policies act as a firewall within your cluster, allowing you to explicitly define which services can communicate. A compromised front-end pod should never be able to reach a backend database.</li>
-                        <li><strong>Pod Security Standards:</strong> Prevent containers from running as the root user, accessing the host filesystem, or gaining privileged capabilities. Enforcing these standards prevents a container breakout from compromising the entire node.</li>
-                        <li><strong>Supply Chain Security:</strong> Your security posture starts before the code even reaches the cluster. Integrate automated image scanning into your CI/CD pipeline to detect known vulnerabilities (CVEs) in your container images <em>before</em> they are deployed.</li>
-                        </ul>
-                        <h3 id="pillar-3-mastering-day-2-operations-and-observability">Pillar 3: Mastering Day-2 Operations and Observability</h3>
-                        <p>Getting a cluster running is Day 1. Keeping it running, performant, and healthy is the relentless Day 2 challenge. You cannot manage what you cannot see.</p>
-                        <ul>
-                        <li><strong>Centralized Logging:</strong> When a microservice composed of dozens of pods fails, sifting through individual container logs is impossible. You need a centralized logging stack (like the EFK stack - Elasticsearch, Fluentd, Kibana) to aggregate logs from all components.</li>
-                        <li><strong>Metrics and Monitoring:</strong> Tools like <strong>Prometheus</strong> for metrics collection and <strong>Grafana</strong> for visualization are the de-facto standard. They provide the vital signs for your cluster—CPU/memory usage, pod health, API server latency—allowing you to proactively identify issues before they become outages.</li>
-                        <li><strong>Automated Scaling:</strong> Master the Horizontal Pod Autoscaler (HPA) to automatically scale your applications based on CPU or memory. For the cluster itself, use the Cluster Autoscaler to add or remove nodes based on demand, ensuring both performance and cost-efficiency.</li>
-                        </ul>
-                        <h3 id="aexyn-your-partner-in-kubernetes-excellence">Aexyn: Your Partner in Kubernetes Excellence</h3>
-                        <p>Navigating the complexities of enterprise Kubernetes is a significant undertaking. At Aexyn, we specialize in helping our international clients move up the maturity curve. We do more than just spin up clusters; we engineer robust, secure, and observable Kubernetes platforms built for the long haul. From implementing advanced security policies to building sophisticated CI/CD pipelines and observability stacks, we provide the deep expertise required to turn Kubernetes from a source of complexity into a true competitive advantage.</p>
+                    </section>
 
-
-                                
-                        </article>
-                        <a href="/blog" class="cm-btn btn2 backToBlog">
-                            <span class="btn-icon"></span>
-                            <span class="btn-text">Back to Blog</span>
-                        </a>
-                    </main>
-                    <aside class="sidebar">
-                        <div class="sticky-sidebar">
-                            <div class="sidebar-widget">
-                                <h3>Recent Posts</h3>
-                                <div class="recent_posts_grid" id="recent-posts"></div>
+                    <section class="blog_post_content accentColor4">
+                        <div class="container">
+                            <div class="blog_post_flex">
+                                <main class="main-content">
+                                    <div class="post-body-byline">
+                                        <div class="tags">
+                                            <a href="/blog/?tag=CloudAndDevOps" class="badge">CloudAndDevOps</a>
+                                        </div>
+                                    </div>
+                                    <article class="post-content">
+                                        <h2>Mastering Kubernetes in Enterprise Environments</h2>
+                                        <p>Your guide to orchestration, scaling, and securing microservices with Kubernetes. Move beyond basic deployment to build a truly enterprise-grade platform.</p>
+                                        <p><em>Full blog content would be loaded here from a separate content management system or markdown files.</em></p>
+                                    </article>
+                                    <a href="/blog" class="cm-btn btn2 backToBlog">
+                                        <span class="btn-icon"></span>
+                                        <span class="btn-text">Back to Blog</span>
+                                    </a>
+                                </main>
+                                <aside class="sidebar">
+                                    <div class="sticky-sidebar">
+                                        <div class="sidebar-widget">
+                                            <h3>Recent Posts</h3>
+                                            <div class="recent_posts_grid" id="recent-posts"></div>
+                                        </div>
+                                    </div>
+                                </aside>
                             </div>
                         </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
+                    </section>
 
-        <section class="blog-section accentColor1 related_posts">
-            <div class="container">
-                <div class="section_header text-left">
-                    <span class="badge">Blogs</span>
-                    <h2><span class="highlighted">Aexyn</span> Related Posts</h2>
-                </div>
-                <div class="custom-row row-gap-30 blogGrid" id="posts-AI"  data-tag="CloudAndDevOps"></div>
-            </div>
-        </section>
-
-        <section class="book_demo accentColor2">
-            <div class="container">
-                <div class="demo-card max-width-800">
-                    <h3>Ready to Take Your Business to the Next Level?</h3>
-                    <p>Let’s explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Talk to an Expert</span>
-                                <span class="btn-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                    </svg>
-                                </span>
-                            </a>
+                    <section class="book_demo accentColor2">
+                        <div class="container">
+                            <div class="demo-card max-width-800">
+                                <h3>Ready to Take Your Business to the Next Level?</h3>
+                                <p>Let's explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
+                                <div class="btn-grid">
+                                    <div class="btn-item">
+                                        <a href="/contact-us" class="cm-btn">
+                                            <span class="btn-text">Talk to an Expert</span>
+                                            <span class="btn-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </section>
+                
     </div>
   </div>
 
   <footer class="footer">
-    <div class="cm-footer">
-        <div class="container">
-            <div class="footer-flex">
-                <div class="footer-logo">
-                    <a href="/">
-                        <img src="images/Aexyn_white_logo.png" alt="Aexyn">
-                    </a>
-                    <div class="social-icons">
-                        <h4>Social</h4>
-                        <ul>
-                            <li>
-                                <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">Services</a>
-                            <ul>
-                                <li><a href="#">AI Agent</a></li>
-                                <li><a href="#">Automation</a></li>
-                                <li><a href="#">API Inegration</a></li>
-                                <li><a href="#">IT Services</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">Industries</a>
-                            <ul>
-                                <li><a href="#">Industry 1</a></li>
-                                <li><a href="#">Industry 1</a></li>
-                                <li><a href="#">Industry 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">About us</a>
-                            <ul>
-                                <li><a href="/about-us">About</a></li>
-                                <li><a href="/blog">Blogs</a></li>
-                                <li><a href="/contact-us">Contact Us</a></li>
-                                <li><a href="/case-studies">Case Studies</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom accentColor1">
-        <div class="container">
-            <div class="footer-flex">
-                <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
-                <div class="quick_links">
-                    <ul>
-                        <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li><a href="/industries">Industries</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact-us">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-  </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <div class="cm-footer">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-logo">
+                  <a href="../../">
+                      <img src="../../images/Aexyn_white_logo.png" alt="Aexyn">
+                  </a>
+                  <div class="social-icons">
+                      <h4>Social</h4>
+                      <ul>
+                          <li>
+                              <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Services</a>
+                          <ul>
+                              <li><a href="#">AI Agent</a></li>
+                              <li><a href="#">Automation</a></li>
+                              <li><a href="#">API Integration</a></li>
+                              <li><a href="#">IT Services</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Industries</a>
+                          <ul>
+                              <li><a href="#">Fintech</a></li>
+                              <li><a href="#">Healthcare</a></li>
+                              <li><a href="#">Retail & E-commerce</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">About us</a>
+                          <ul>
+                              <li><a href="../../about-us">About</a></li>
+                              <li><a href="../../blog">Blogs</a></li>
+                              <li><a href="../../contact-us">Contact Us</a></li>
+                              <li><a href="../../case-studies">Case Studies</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom accentColor1">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
+              <div class="quick_links">
+                  <ul>
+                      <li><a href="../../about-us">About Us</a></li>
+                      <li><a href="../../services">Services</a></li>
+                      <li><a href="../../industries">Industries</a></li>
+                      <li><a href="../../blog">Blog</a></li>
+                      <li><a href="../../contact-us">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="js/main.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/components/blog-loader.js"></script>
+<script src="js/main.js"></script> 
 </body>
-</html>
+</html> 

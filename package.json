@@ -1,0 +1,24 @@
+{
+  "name": "aexyn-site",
+  "version": "1.0.0",
+  "description": "Aexyn corporate website with component-based architecture",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build-site.js",
+    "build:dev": "node build-site.js && npm run serve",
+    "serve": "npx http-server . -p 3000 -c-1",
+    "clean": "node scripts/clean.js",
+    "dev": "npm run build && npm run serve",
+    "watch": "nodemon --watch components --watch templates --watch pages --ext html,js --exec \"npm run build\""
+  },
+  "keywords": ["website", "components", "static-site"],
+  "author": "Aexyn",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
