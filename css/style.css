@@ -324,6 +324,102 @@ h6, .h6 {
 
 
 
+
+/* Contact us screen form */
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-container h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+}
+
+.contact-container p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* .bannerV2 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+} */
+
+.floating-contact-form {
+  position: absolute;
+  top: 50%; /* Pushes form down 50% inside the banner */
+  right: 40px; /* Distance from the right edge */
+  width: 620px;
+  transform: translateY(-50%); /* Pulls half of form above the banner */
+  z-index: 20;
+}
+
+
+/* .bannerV2 {
+  padding-bottom: 240px;
+} */
+
+
+
+
 @media (min-width: 768px) {
   .custom-col-1,
   .custom-col-10,
@@ -1944,4 +2040,5 @@ p:last-child {
     .navigation {
         font-size:14px;
     }
+
 }
