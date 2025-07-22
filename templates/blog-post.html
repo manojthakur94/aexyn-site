@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{head}}
+</head>
+<body {{bodyClass}}>
+  {{header}}
+  
+  <div class="layout" data-scroll-container>
+    <div class="body-container-wrapper">
+      {{content}}
+      
+      <!-- Related Posts Section -->
+      <section class="blog-section accentColor1 related_posts">
+          <div class="container">
+              <div class="section_header text-left">
+                  <span class="badge">Blogs</span>
+                  <h2><span class="highlighted">Related</span> Posts</h2>
+              </div>
+              <div class="custom-row row-gap-30 blogGrid" id="related-posts" data-tag="{{primaryTag}}"></div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  {{footer}}
+  {{scripts}}
+</body>
+</html> 

@@ -2,347 +2,295 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<!--
--->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build AI Copilot</title>
-  <!-- Base URL is set dynamically via config.js -->
-  <script src="../../js/config.js"></script>
-  <link rel="icon" href="images/fav_icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024 | Aexyn</title>
+<!-- Base URL is set dynamically via config.js -->
+<script src="../../js/config.js"></script>
+<link rel="icon" href="../../images/fav_icon.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+<link rel="stylesheet" href="../../css/style.css" />
+ 
 </head>
-<body>
-
-    
+<body >
   <header class="header">
-    <div class="cm-header defaultHeader">
-        <div class="container">
-            <div class="header-flex">
-                <div class="logo-col">
-                    <a href="/">
-                        <img src="images/Aexyn_white_logo.png" width="150" alt="Aexyn">
-                    </a>
-                </div>
-                <nav class="navigation">
-                    <div class="menuClose"><span></span></div>
-                    <ul>
-                        <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
-                        <li><a href="/">Home</a></li>
-                        <li class="has-children">
-                            <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
-                            <div class="megaMenu">
-                                <div class="container">
-                                    <div class="megaMenuBg">
-                                        <h4>Services</h4>
-                                        <div class="custom-row">
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>AI & DATA ENGINEERING</strong>
-                                                        <ul>
-                                                            <li><a href="#">AI Consulting & Transformation</a></li>
-                                                            <li><a href="#">LLM-based Apps & GPT Integration</a></li>
-                                                            <li><a href="#">Machine Learning & Predictive Modeling</a></li>
-                                                            <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
-                                                            <li><a href="#">Custom AI Solution Development</a></li>
-                                                            <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>PRODUCT ENGINEERING</strong>
-                                                        <ul>
-                                                            <li><a href="#">Digital Product  and Platform Development</a></li>
-                                                            <li><a href="#">Web and  Mobile App Development</a></li>
-                                                            <li><a href="#">IoT Development</a></li>
-                                                            <li><a href="#">AR Development</a></li>
-                                                            <li><a href="#">Cloud & DevOps</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="custom-col-4">
-                                                <ul>
-                                                    <li>
-                                                        <strong>EXPERIENCE & GROWTH</strong>
-                                                        <ul>
-                                                            <li><a href="#">Product Discovery and Design Sprints</a></li>
-                                                            <li><a href="#">Data-Driven UX/UI</a></li>
-                                                            <li><a href="#">Rapid Prototyping</a></li>
-                                                            <li><a href="#">Wireframes and Visual Designs</a></li>
-                                                            <li><a href="#">UI/UX</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="has-children industry_menu">
-                            <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
-                            <div class="megaMenu">
-                                <div class="container">
-                                    <div class="megaMenuBg">
-                                        <h4>Industries</h4>
-                                        <div class="custom-row">
-                                            <div class="custom-col-12">
-                                                <ul>
-                                                    <li>
-                                                        <ul>
-                                                            <li><a href="#">Fintech</a></li>
-                                                            <li><a href="#">Healthcare</a></li>
-                                                            <li><a href="#">Retail & E-commerce</a></li>
-                                                            <li><a href="#">EdTech</a></li>
-                                                            <li><a href="#">Manufacturing</a></li>
-                                                            <li><a href="#">Mobility</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="/case-studies">Case Studies</a></li>
-                        <li><a href="/blog">Blogs</a></li>
-                        <li><a href="/about-us">About Us</a></li>
-                    </ul>
-                </nav>
-                <div class="header-right-col">
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Contact Us</span>
-                                <span class="btn-icon"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="menuTrigger"><span></span><span></span><span></span></div>
-            </div>
-        </div>
-    </div>
-  </header>
-
+  <div class="cm-header defaultHeader">
+      <div class="container">
+          <div class="header-flex">
+              <div class="logo-col">
+                  <a href="../../">
+                      <img src="../../images/Aexyn_white_logo.png" width="150" alt="Aexyn">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <div class="menuClose"><span></span></div>
+                  <ul>
+                      <li class="highlightedMenu"><a href="#">Get Free AI Consultation</a></li>
+                      <li><a href="../../">Home</a></li>
+                      <li class="has-children">
+                          <a href="javascript:void(0)">Services <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Services</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>AI & DATA ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="#">AI Consulting & Transformation</a></li>
+                                                          <li><a href="#">LLM-based Apps & GPT Integration</a></li>
+                                                          <li><a href="#">Machine Learning & Predictive Modeling</a></li>
+                                                          <li><a href="#">NLP, Computer Vision, and GenAI</a></li>
+                                                          <li><a href="#">Custom AI Solution Development</a></li>
+                                                          <li><a href="#">MLOps & Continuous Training Pipelines</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>PRODUCT ENGINEERING</strong>
+                                                      <ul>
+                                                          <li><a href="../../services/digital-product-development/">Digital Product and Platform Development</a></li>
+                                                          <li><a href="#">Web and Mobile App Development</a></li>
+                                                          <li><a href="#">IoT Development</a></li>
+                                                          <li><a href="#">AR Development</a></li>
+                                                          <li><a href="#">Cloud & DevOps</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                          <div class="custom-col-4">
+                                              <ul>
+                                                  <li>
+                                                      <strong>EXPERIENCE & GROWTH</strong>
+                                                      <ul>
+                                                          <li><a href="#">Product Discovery and Design Sprints</a></li>
+                                                          <li><a href="#">Data-Driven UX/UI</a></li>
+                                                          <li><a href="#">Rapid Prototyping</a></li>
+                                                          <li><a href="#">Wireframes and Visual Designs</a></li>
+                                                          <li><a href="#">UI/UX</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="has-children industry_menu">
+                          <a href="javascript:void(0)">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                          <div class="megaMenu">
+                              <div class="container">
+                                  <div class="megaMenuBg">
+                                      <h4>Industries</h4>
+                                      <div class="custom-row">
+                                          <div class="custom-col-12">
+                                              <ul>
+                                                  <li>
+                                                      <ul>
+                                                          <li><a href="#">Fintech</a></li>
+                                                          <li><a href="#">Healthcare</a></li>
+                                                          <li><a href="#">Retail & E-commerce</a></li>
+                                                          <li><a href="#">EdTech</a></li>
+                                                          <li><a href="#">Manufacturing</a></li>
+                                                          <li><a href="#">Mobility</a></li>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li><a href="../../case-studies">Case Studies</a></li>
+                      <li><a href="../../blog">Blogs</a></li>
+                      <li><a href="../../about-us">About Us</a></li>
+                  </ul>
+              </nav>
+              <div class="header-right-col">
+                  <div class="btn-grid">
+                      <div class="btn-item">
+                          <a href="../../contact-us" class="cm-btn">
+                              <span class="btn-text">Contact Us</span>
+                              <span class="btn-icon"></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="menuTrigger"><span></span><span></span><span></span></div>
+          </div>
+      </div>
+  </div>
+</header> 
+  
   <div class="layout" data-scroll-container>
     <div class="body-container-wrapper">
-        
-
-        <section class="bannerV2 accentColor2 post_banner" style="background-image:url(images/building_Your_First_AI_Copilot.jpeg);" >
-            <div class="container">
-                <div class="small_container">
-                    <span class="badge">Blog</span>
-                    <h1>Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024</h1>
-                    <div class="post-meta">
-                        <span class="date">Jan 12, 2024</span>
-                        <span class="author">by Aman</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="blog_post_content accentColor4">
-            <div class="container">
-                <div class="blog_post_flex">
-                    <main class="main-content">
-                        <div class="post-body-byline">
-                            <div class="tags">
-                                <a href="/blog/?tag=AI%26ML" class="badge">AI&ML</a>
-                          
+      
+                    <section class="bannerV2 accentColor2 post_banner" style="background-image:url(images/building_Your_First _AI _Copilot.jpeg);">
+                        <div class="container">
+                            <div class="small_container">
+                                <span class="badge">Blog</span>
+                                <h1>Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024</h1>
+                                <div class="post-meta">
+                                    <span class="date">May 20, 2024</span>
+                                    <span class="author">by Aman</span>
+                                </div>
                             </div>
                         </div>
-                        <article class="post-content">
-                          <h2 id="building-your-first-ai-copilot-the-definitive-enterprise-pattern-for-2024">Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024</h2>
-                            <p>Last year was the year the world woke up to the power of Generative AI. As we noted in our &quot;<a href="/blog/2023-tech-roundup/">2023 Tech Roundup</a>,&quot; the conversation moved at lightspeed from speculative hype to the practical realities of implementation. Now, as we step into 2024, a clear and powerful pattern has emerged from the noise: the <strong>AI Copilot</strong>.</p>
-                            <p>This is the definitive design pattern for applying Large Language Models (LLMs) in a business context. It&#39;s more than a chatbot and smarter than a search bar. A copilot is an AI-powered assistant embedded directly into a user&#39;s workflow, designed to augment their skills, accelerate repetitive tasks, and act as an expert on institutional knowledge.</p>
-                            <p>For enterprises, building a copilot is the most tangible way to translate the magic of LLMs into measurable productivity gains and enhanced customer experiences.</p>
-                            <h3 id="what-makes-a-copilot-different-">What Makes a Copilot Different?</h3>
-                            <p>A simple Q&amp;A bot can answer a question from a knowledge base. A copilot does more. It&#39;s an active partner in the work being done.</p>
-                            <ul>
-                            <li><strong>It&#39;s Context-Aware:</strong> It understands the user&#39;s current task within an application (e.g., the specific sales lead they are viewing in a CRM).</li>
-                            <li><strong>It&#39;s Action-Oriented:</strong> It doesn&#39;t just provide information; it helps the user <em>do</em> something with it—draft an email, write a block of code, summarize a document, or create a new user story.</li>
-                            <li><strong>It&#39;s Augmented Intelligence:</strong> The goal is not to replace the human user but to make them exponentially better at their job. The human is still the pilot, in full command.</li>
-                            </ul>
-                            <h3 id="the-two-primary-arenas-for-ai-copilots">The Two Primary Arenas for AI Copilots</h3>
-                            <p>Copilots can be deployed to supercharge two key areas of your business: internal productivity and external customer engagement.</p>
-                            <p><strong>1. Internal Copilots: Supercharging Your Workforce</strong></p>
-                            <p>These are assistants designed for your employees, integrated into the tools they use every day.</p>
-                            <ul>
-                            <li><strong>The Sales Copilot:</strong> Imagine a copilot living inside your Salesforce or HubSpot. It listens to a recorded sales call, provides a perfect summary, drafts a follow-up email tailored to the customer&#39;s concerns, and even updates the CRM fields automatically. Your sales team spends less time on admin and more time selling.</li>
-                            <li><strong>The Analyst Copilot:</strong> A financial or business analyst can use natural language to query complex datasets. Instead of writing SQL, they can ask, &quot;Show me the quarterly sales growth for our top 5 products in the EMEA region and visualize it as a bar chart.&quot;</li>
-                            <li><strong>The Engineering Copilot:</strong> We&#39;ve seen the power of GitHub Copilot. This pattern is being replicated internally, creating copilots trained on a company&#39;s own massive, private codebases to help new developers understand legacy systems and accelerate feature development.</li>
-                            </ul>
-                            <p><strong>2. External Copilots: Revolutionizing Your Customer Experience</strong></p>
-                            <p>These are assistants embedded directly into your products to help your customers succeed.</p>
-                            <ul>
-                            <li><strong>The SaaS Onboarding Assistant:</strong> For complex software products, a copilot can act as a personal guide for new users. It can answer &quot;how-to&quot; questions in context, demonstrate features, and help users get to their &quot;aha!&quot; moment faster, dramatically improving activation and retention rates.</li>
-                            <li><strong>The E-commerce Concierge:</strong> A smart shopping assistant that goes beyond keyword search. A customer can ask, &quot;I need a durable, carry-on suitcase under $200 that will fit on European airlines.&quot; The copilot can ask clarifying questions and provide tailored recommendations, replicating the experience of a knowledgeable retail associate.</li>
-                            </ul>
-                            <h3 id="the-architecture-of-a-copilot-a-glimpse-under-the-hood">The Architecture of a Copilot: A Glimpse Under the Hood</h3>
-                            <p>Building a robust copilot involves more than just plugging into a public LLM API. The core components include:</p>
-                            <ol>
-                            <li><strong>A Powerful LLM:</strong> The &quot;brain&quot; of the operation (e.g., OpenAI&#39;s GPT-4, Google&#39;s Gemini, or an open-source model).</li>
-                            <li><strong>A Seamless UI:</strong> The conversational interface embedded within your application.</li>
-                            <li><strong>An Orchestration Layer:</strong> The backend logic that manages the conversation, handles state, and decides when to call the LLM or other tools.</li>
-                            <li><strong>A Connection to Your Data:</strong> This is the most critical piece. To provide accurate, company-specific answers and avoid making things up, a copilot must be connected to your internal knowledge bases, databases, and APIs. This technique, which we will explore in-depth in our upcoming post, <strong>&quot;<a href="/blog/rag-for-enterprise/">RAG Explained for CTOs</a>&quot;</strong>, is what makes an AI assistant truly useful for an enterprise.</li>
-                            </ol>
-                            <h3 id="aexyn-your-partner-in-building-custom-copilots">Aexyn: Your Partner in Building Custom Copilots</h3>
-                            <p>The journey from idea to a production-ready AI copilot is a complex one, requiring expertise in AI, data engineering, and application development. At Aexyn, we specialize in helping our clients design and build secure, reliable, and high-value AI copilots. We work with you to identify the most impactful use case, architect the solution, and integrate it seamlessly into your workflows to unlock real business value.</p>
+                    </section>
 
-                                
-                        </article>
-                        <a href="/blog" class="cm-btn btn2 backToBlog">
-                            <span class="btn-icon"></span>
-                            <span class="btn-text">Back to Blog</span>
-                        </a>
-                    </main>
-                    <aside class="sidebar">
-                        <div class="sticky-sidebar">
-                            <div class="sidebar-widget">
-                                <h3>Recent Posts</h3>
-                                <div class="recent_posts_grid" id="recent-posts"></div>
+                    <section class="blog_post_content accentColor4">
+                        <div class="container">
+                            <div class="blog_post_flex">
+                                <main class="main-content">
+                                    <div class="post-body-byline">
+                                        <div class="tags">
+                                            <a href="/blog/?tag=AI%26ML" class="badge">AI&ML</a>
+                                        </div>
+                                    </div>
+                                    <article class="post-content">
+                                        <h2>Building Your First AI Copilot: The Definitive Enterprise Pattern for 2024</h2>
+                                        <p>Large Language Models (LLMs) are being applied to business. Learn how the copilot pattern is emerging as the key to building valuable internal and external AI assistants.</p>
+                                        <p><em>Full blog content would be loaded here from a separate content management system or markdown files.</em></p>
+                                    </article>
+                                    <a href="/blog" class="cm-btn btn2 backToBlog">
+                                        <span class="btn-icon"></span>
+                                        <span class="btn-text">Back to Blog</span>
+                                    </a>
+                                </main>
+                                <aside class="sidebar">
+                                    <div class="sticky-sidebar">
+                                        <div class="sidebar-widget">
+                                            <h3>Recent Posts</h3>
+                                            <div class="recent_posts_grid" id="recent-posts"></div>
+                                        </div>
+                                    </div>
+                                </aside>
                             </div>
                         </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
+                    </section>
 
-        <section class="blog-section accentColor1 related_posts">
-            <div class="container">
-                <div class="section_header text-left">
-                    <span class="badge">Blogs</span>
-                    <h2><span class="highlighted">Aexyn</span> Related Posts</h2>
-                </div>
-                <div class="custom-row row-gap-30 blogGrid" id="posts-AI"  data-tag="AI&ML"></div>
-            </div>
-        </section>
-
-        <section class="book_demo accentColor2">
-            <div class="container">
-                <div class="demo-card max-width-800">
-                    <h3>Ready to Take Your Business to the Next Level?</h3>
-                    <p>Let’s explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
-                    <div class="btn-grid">
-                        <div class="btn-item">
-                            <a href="/contact-us" class="cm-btn">
-                                <span class="btn-text">Talk to an Expert</span>
-                                <span class="btn-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                        <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                    </svg>
-                                </span>
-                            </a>
+                    <section class="book_demo accentColor2">
+                        <div class="container">
+                            <div class="demo-card max-width-800">
+                                <h3>Ready to Take Your Business to the Next Level?</h3>
+                                <p>Let's explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
+                                <div class="btn-grid">
+                                    <div class="btn-item">
+                                        <a href="/contact-us" class="cm-btn">
+                                            <span class="btn-text">Talk to an Expert</span>
+                                            <span class="btn-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </section>
+                
     </div>
   </div>
 
   <footer class="footer">
-    <div class="cm-footer">
-        <div class="container">
-            <div class="footer-flex">
-                <div class="footer-logo">
-                    <a href="/">
-                        <img src="images/Aexyn_white_logo.png" alt="Aexyn">
-                    </a>
-                    <div class="social-icons">
-                        <h4>Social</h4>
-                        <ul>
-                            <li>
-                                <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">Services</a>
-                            <ul>
-                                <li><a href="#">AI Agent</a></li>
-                                <li><a href="#">Automation</a></li>
-                                <li><a href="#">API Inegration</a></li>
-                                <li><a href="#">IT Services</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">Industries</a>
-                            <ul>
-                                <li><a href="#">Industry 1</a></li>
-                                <li><a href="#">Industry 1</a></li>
-                                <li><a href="#">Industry 1</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="javascript:void(0)">About us</a>
-                            <ul>
-                                <li><a href="/about-us">About</a></li>
-                                <li><a href="/blog">Blogs</a></li>
-                                <li><a href="/contact-us">Contact Us</a></li>
-                                <li><a href="/case-studies">Case Studies</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom accentColor1">
-        <div class="container">
-            <div class="footer-flex">
-                <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
-                <div class="quick_links">
-                    <ul>
-                        <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li><a href="/industries">Industries</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact-us">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-  </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <div class="cm-footer">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-logo">
+                  <a href="../../">
+                      <img src="../../images/Aexyn_white_logo.png" alt="Aexyn">
+                  </a>
+                  <div class="social-icons">
+                      <h4>Social</h4>
+                      <ul>
+                          <li>
+                              <a href="https://www.linkedin.com/" target="_blank" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://github.com/" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Services</a>
+                          <ul>
+                              <li><a href="#">AI Agent</a></li>
+                              <li><a href="#">Automation</a></li>
+                              <li><a href="#">API Integration</a></li>
+                              <li><a href="#">IT Services</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">Industries</a>
+                          <ul>
+                              <li><a href="#">Fintech</a></li>
+                              <li><a href="#">Healthcare</a></li>
+                              <li><a href="#">Retail & E-commerce</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="footer-menu">
+                  <ul>
+                      <li>
+                          <a href="javascript:void(0)">About us</a>
+                          <ul>
+                              <li><a href="../../about-us">About</a></li>
+                              <li><a href="../../blog">Blogs</a></li>
+                              <li><a href="../../contact-us">Contact Us</a></li>
+                              <li><a href="../../case-studies">Case Studies</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom accentColor1">
+      <div class="container">
+          <div class="footer-flex">
+              <div class="footer-copyright">© 2025 Aexyn. All rights reserved.</div>
+              <div class="quick_links">
+                  <ul>
+                      <li><a href="../../about-us">About Us</a></li>
+                      <li><a href="../../services">Services</a></li>
+                      <li><a href="../../industries">Industries</a></li>
+                      <li><a href="../../blog">Blog</a></li>
+                      <li><a href="../../contact-us">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="js/main.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/components/blog-loader.js"></script>
+<script src="js/main.js"></script> 
 </body>
-</html>
+</html> 
