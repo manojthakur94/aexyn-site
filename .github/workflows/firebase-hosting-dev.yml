@@ -1,0 +1,262 @@
+# Development deployment pipeline
+
+name: 🔧 Development Pipeline
+on:
+  push:
+    branches: [dev, develop, development]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - '.gitignore'
+
+jobs:
+  setup:
+    name: 🔧 Environment Setup
+    if: github.repository == 'aexyn-contact/aexyn-website'
+    runs-on: ubuntu-latest
+    
+    outputs:
+      node-version: ${{ steps.env-info.outputs.node-version }}
+      npm-version: ${{ steps.env-info.outputs.npm-version }}
+      commit-sha: ${{ steps.env-info.outputs.commit-sha }}
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: 📋 Environment Validation
+        id: env-info
+        run: |
+          NODE_VER=$(node --version)
+          NPM_VER=$(npm --version)
+          COMMIT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          
+          echo "Node.js version: $NODE_VER"
+          echo "NPM version: $NPM_VER"
+          echo "Working directory: $(pwd)"
+          echo "Package.json exists: $(test -f package.json && echo 'Yes' || echo 'No')"
+          echo "Environment: Development"
+          
+          # Validate required secrets
+          if [ -z "${{ secrets.FIREBASE_PROJECT_ID }}" ]; then
+            echo "❌ ERROR: FIREBASE_PROJECT_ID secret is not set!"
+            echo "Please add this secret in GitHub repository settings."
+            exit 1
+          fi
+          
+          if [ -z "${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}" ]; then
+            echo "❌ ERROR: FIREBASE_SERVICE_ACCOUNT_KEY secret is not set!"
+            echo "Please add this secret in GitHub repository settings."
+            exit 1
+          fi
+          
+          echo "✅ All required secrets are configured"
+          echo "Project ID: ${{ secrets.FIREBASE_PROJECT_ID }}"
+          echo "Target: development (aexyn-site-dev)"
+          echo "Expected URL: https://aexyn-site-dev.web.app"
+          
+          echo "node-version=$NODE_VER" >> $GITHUB_OUTPUT
+          echo "npm-version=$NPM_VER" >> $GITHUB_OUTPUT
+          echo "commit-sha=$COMMIT_SHA" >> $GITHUB_OUTPUT
+
+  dependencies:
+    name: 📦 Install Dependencies
+    needs: setup
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: 📦 Clean Install Dependencies
+        run: |
+          npm cache clean --force
+          npm ci --verbose
+
+      - name: 🔒 Security Audit
+        run: |
+          npm audit --audit-level=high
+
+      - name: 💾 Cache Dependencies
+        uses: actions/cache/save@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-dev-node-modules-${{ hashFiles('package-lock.json') }}
+
+  build:
+    name: 🏗️ Development Build
+    needs: [setup, dependencies]
+    runs-on: ubuntu-latest
+    environment: development
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 💾 Restore Dependencies
+        uses: actions/cache/restore@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-dev-node-modules-${{ hashFiles('package-lock.json') }}
+          fail-on-cache-miss: true
+
+      - name: 🏗️ Build Development Site
+        env:
+          NODE_ENV: development
+          BASE_URL: https://aexyn-site-dev.web.app
+        run: |
+          echo "Building for development environment..."
+          echo "Base URL: $BASE_URL"
+          npm run build:dev --verbose
+          echo "Generated HTML files:"
+          find . -maxdepth 3 -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | head -10
+          echo "Generated assets:"
+          ls -la css/ js/ images/ || echo "Static assets directories"
+
+      - name: 🔍 Build Quality Check
+        run: |
+          if [ ! -f "index.html" ]; then
+            echo "❌ Error: index.html not found in root!"
+            exit 1
+          fi
+          
+          HTML_FILES=$(find . -maxdepth 3 -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | wc -l)
+          JS_FILES=$(find js/ -name "*.js" 2>/dev/null | wc -l || echo "0")
+          CSS_FILES=$(find css/ -name "*.css" 2>/dev/null | wc -l || echo "0")
+          
+          echo "HTML files: $HTML_FILES"
+          echo "JavaScript files: $JS_FILES"
+          echo "CSS files: $CSS_FILES"
+          
+          if [ "$HTML_FILES" -eq 0 ]; then
+            echo "❌ Error: No HTML files found!"
+            exit 1
+          fi
+          
+          echo "✅ Development build verification passed"
+
+      - name: 📤 Upload Development Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: development-build
+          path: |
+            ./*.html
+            ./blog/
+            ./services/
+            ./Industries/
+            ./css/
+            ./js/
+            ./images/
+            ./videos/
+            ./firebase.json
+            ./.firebaserc
+          retention-days: 7
+
+  deploy:
+    name: 🚀 Deploy to Development
+    needs: [setup, dependencies, build]
+    runs-on: ubuntu-latest
+    environment: development
+    
+    outputs:
+      deployment-url: ${{ steps.firebase-deploy.outputs.details_url }}
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 📤 Download Development Build
+        uses: actions/download-artifact@v4
+        with:
+          name: development-build
+          path: .
+
+      - name: 🔧 Pre-deployment Validation
+        run: |
+          if [ ! -f "firebase.json" ]; then
+            echo "❌ Error: firebase.json not found!"
+            exit 1
+          fi
+          if [ ! -f ".firebaserc" ]; then
+            echo "❌ Error: .firebaserc not found!"
+            exit 1
+          fi
+          
+          ls -la
+          if [ ! -f "index.html" ]; then
+            echo "❌ Error: Development build missing!"
+            exit 1
+          fi
+
+      - name: 🚀 Deploy to Firebase Hosting (Development)
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        id: firebase-deploy
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
+          channelId: live
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
+          target: development
+
+      - name: 🔍 Debug Firebase Outputs
+        run: |
+          echo "Firebase deploy outputs:"
+          echo "details_url: ${{ steps.firebase-deploy.outputs.details_url }}"
+          echo "preview_url: ${{ steps.firebase-deploy.outputs.preview_url }}"
+
+  verify:
+    name: ✅ Post-deployment Verification
+    needs: [setup, dependencies, build, deploy]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🔍 Development Site Verification
+        run: |
+          echo "Verifying development deployment..."
+          
+          # Wait a moment for deployment to propagate
+          sleep 10
+          
+          SITE_URL="https://aexyn-site-dev.web.app"
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL" || echo "000")
+          RESPONSE_TIME=$(curl -s -o /dev/null -w "%{time_total}" "$SITE_URL" || echo "0")
+          
+          echo "Site URL: $SITE_URL"
+          echo "HTTP Status: $HTTP_STATUS"
+          echo "Response Time: ${RESPONSE_TIME}s"
+          
+          if [ "$HTTP_STATUS" = "200" ]; then
+            echo "✅ Development site is accessible"
+          else
+            echo "⚠️ Warning: Development site returned HTTP $HTTP_STATUS"
+          fi
+
+      - name: 📊 Deployment Summary
+        run: |
+          echo "## Development Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "- **Dev URL:** https://aexyn-site-dev.web.app" >> $GITHUB_STEP_SUMMARY
+          echo "- **Firebase Console:** ${{ needs.deploy.outputs.deployment-url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ needs.setup.outputs.commit-sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment:** Development" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed at:** $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Node.js:** ${{ needs.setup.outputs.node-version }}" >> $GITHUB_STEP_SUMMARY 
