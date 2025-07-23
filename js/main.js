@@ -300,7 +300,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     // Hardcoded values
     subject: "Website Contact Form Submission",
     queryType: "General Inquiry"
-    
+
   };
   const submitBtn = form.querySelector('.submit-btn');
   submitBtn.disabled = true;
@@ -321,7 +321,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       form.reset();
       submitBtn.disabled = false;
       submitBtn.innerText = 'Submit';
-    
+
     } else {
       alert('Something went wrong: ' + result.message);
     }
