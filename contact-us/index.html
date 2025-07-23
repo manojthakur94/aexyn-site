@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <base href="http://127.0.0.1:5500/">
-  <!-- <base href="https://manojthakur94.github.io/aexyn-site/"> -->
+  <!-- Base URL is set dynamically via config.js -->
+  <script src="../js/config.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Healthcare|| Aexyn</title>
+  <title>ContactUs || Aexyn</title>
+
   <link rel="icon" href="images/fav_icon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
+
+
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -134,46 +140,94 @@
     </div>
   </header>
 
- <section class="contact-bannerV2 contact-accentColor2" style="background-image:url(images/IoT_2.jpeg);">
-  <div class="contact-container">
-    <div class="contact_bannerV2_content">
-      <h1>Healthcare</h1>
-      <div class="contact_ban_desc">
-        We build intelligent IoT solutions that bridge the physical and digital worlds,
-      </div>
-    </div>
-  </div>
+
+   <section class="bannerV2 accentColor2" style="background-image:url(images/IoT_2.jpeg);">
+            <div class="container">
+                <div class="bannerV2_content">
+                    <h1>Let’s Build Something Great Together</h1>
+                    <div class="ban_desc">
+                       We’re excited to learn about your project, challenges, or vision. Whether you're starting from scratch, scaling your tech, or need expert support — our team is here to help.
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="accentColor1">
+            <div class="container">
+              <div class="bannerV2_content">
+                    <h3 class="badge-heading">Trusted by Startups, Enterprises & Industry Leaders</h3>
+                    <p >
+                    Over the years, we’ve delivered high-impact digital products across industries including healthcare, fintech, logistics, eCommerce and many more industries. 
+                    </p>
+
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <img src="images/clutch.png" alt="Clients" />
+                            <p>20+ Global <br> Clients</p>
+                        </div>
+                        <div class="badge-item">
+                            <img src="images/experience.png" alt="Experience" />
+                            <p>30+ Years of  Leadership Experience</p>
+                        </div>
+                        <div class="badge-item">
+                            <img src="images/globe.png" alt="solutions" />
+                            <p>20+ Solutions Designed and Delivered</p>
+                        </div>
+                        <div class="badge-item">
+                            <img src="images/downloads.png" alt="App Downloads" />
+                            <p>500K+ App Downloads</p>
+                        </div>
+                 <!-- <p class="contact-cta-text">
+      Let’s start with a quick discovery call — we’ll listen, guide, and propose a path forward tailored to your goals.
+    </p> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  
 
   <!-- Floating Contact Form -->
   <div class="floating-contact-form">
     <div class="contact-container">
-      <h2>Request a Proposal</h2>
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-        </div>
+      <h2>Schedule a Free Consultation</h2>
+      <br>
+      <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group half-width">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
 
-        <div class="form-group">
-          <label for="email">Company Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
-        </div>
+                    <div class="form-group half-width">
+                    <label for="email">Company Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
 
-        <div class="form-group">
-          <label for="company">Company/Organization</label>
-          <input type="text" id="company" name="company" placeholder="Your Company Name" required>
-        </div>
+                <div class="form-group">
+                    <label for="company">Contact number</label>
+                     <input id="phone" name="phone" type="tel" required />
+                </div>
+          
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
-        </div>
+                <div class="form-group">
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name" required>
+                </div>
 
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="To better assist you, Please describe how we can help..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+        </form>
     </div>
   </div>
 </section>
+
+
 
 
   <footer class="footer">
@@ -269,6 +323,45 @@
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+
+<script>
+  
+    const input = document.querySelector("#phone");
+    const iti = window.intlTelInput(input, {
+      initialCountry: "us",
+      separateDialCode: true,
+      preferredCountries: ["in", "us", "gb", "ae", "au"],
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"
+    });
+
+    // Restrict input to numbers only
+    input.addEventListener("input", function () {
+      this.value = this.value.replace(/[^0-9]/g, "");
+    });
+
+    input.addEventListener("keydown", function (e) {
+      const allowedKeys = ["Backspace", "Delete", "Tab", "ArrowLeft", "ArrowRight"];
+      if (!allowedKeys.includes(e.key) && !/^\d$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Optional: prevent form submit if number is invalid
+    // // document.querySelector(".contact-form").addEventListener("submit", function (e) {
+    // //   if (!iti.isValidNumber()) {
+    // //     alert("Please enter a valid contact number.");
+    // //     e.preventDefault();
+    // //   }
+    // });
+
+</script>
+
+
+
 <script src="js/main.js"></script>
+
+
 </body>
 </html>

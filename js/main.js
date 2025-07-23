@@ -281,6 +281,60 @@
         '</div>'
       );
     }
+
+
+// For Api hit of contact us form
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+
+
+  const form = e.target;
+  const data = {
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    company: form.company.value.trim(),
+    message: form.message.value.trim(),
+
+    // Hardcoded values
+    subject: "Website Contact Form Submission",
+    queryType: "General Inquiry"
+    
+  };
+  const submitBtn = form.querySelector('.submit-btn');
+  submitBtn.disabled = true;
+  submitBtn.innerText = 'Submitting...';
+  try {
+    const response = await fetch('https://aexyncontactus.web.app/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+
+
+    if (response.ok) {
+      alert('Thank you! Your message has been sent.');
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerText = 'Submit';
+    
+    } else {
+      alert('Something went wrong: ' + result.message);
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    alert('There was an error submitting the form. Please try again later.');
+  }
+});
+
+
+
+
+
     fetch(JSON_PATH)
       .then(function (r) { return r.json(); })
       .then(function (posts) {

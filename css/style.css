@@ -396,7 +396,7 @@ h6, .h6 {
   background-color: #0056b3;
 }
 
-/* .bannerV2 {
+/* .contact-bannerV2  {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -405,17 +405,189 @@ h6, .h6 {
 
 .floating-contact-form {
   position: absolute;
-  top: 50%; /* Pushes form down 50% inside the banner */
+  top: 60%; /* Pushes form down 50% inside the banner */
   right: 40px; /* Distance from the right edge */
   width: 620px;
   transform: translateY(-50%); /* Pulls half of form above the banner */
-  z-index: 20;
+  z-index: 4;
 }
 
 
-/* .bannerV2 {
-  padding-bottom: 240px; 
-} */
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group.half-width {
+  flex: 1 1 48%;
+  min-width: 240px;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Only allow height resizing */
+}
+
+
+/* Contct form Contact number field width */
+
+.iti {
+  width: 100%;
+}
+
+
+
+
+/* Medium desktops & small laptops */
+@media (max-width: 1200px) {
+  .floating-contact-form {
+    right: 120px;
+    width: 600px;
+  }
+}
+
+/* iPad landscape/tablet (1024px) */
+@media (max-width: 1024px) {
+  .floating-contact-form {
+    right: 60px;
+    width: 80%;
+  }
+}
+
+
+/* iPads and portrait tablets */
+@media (max-width: 900px) {
+  .floating-contact-form {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .contact-container {
+    padding: 30px 20px;
+    max-width: 100%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-row .form-group.half-width {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* iPad portrait/tablet & larger mobiles (768px) */
+@media (max-width: 768px) {
+  .floating-contact-form {
+    position: static; /* Flow with page */
+    width: 100%;
+    margin: 30px auto;
+    transform: none;
+    padding: 0 20px;
+  }
+  
+  .contact-container {
+    padding: 30px 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-row .form-group.half-width {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
+
+/* Small mobiles (480px) */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px 10px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px 0;
+  }
+}
+
+
+
+
+
+
+/* Contact us page other content */
+
+.badge-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.badge-description {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.badge-item img {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.badge-item p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.contact-cta-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #111;
+  margin-top: 20px;
+}
+
+
+
+
+
+
 
 
 
