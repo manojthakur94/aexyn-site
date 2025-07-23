@@ -15,7 +15,10 @@
     "firebase:deploy": "npm run build:prod && firebase deploy --only hosting:production",
     "firebase:deploy:dev": "npm run build:dev && firebase deploy --only hosting:development",
     "ci:build": "npm run build",
-    "postbuild": "echo 'Build completed successfully'"
+    "postbuild": "echo 'Build completed successfully'",
+    "extract-content": "node scripts/extract-blog-content.js",
+    "verify-blogs": "node scripts/verify-blogs.js",
+    "maintain": "node scripts/maintain.js"
   },
   "keywords": ["website", "components", "static-site"],
   "author": "Aexyn",

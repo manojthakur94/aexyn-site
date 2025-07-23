@@ -41,7 +41,101 @@ function processPageContent(content, basePath) {
     return processedContent;
 }
 
-// Build configuration for all pages
+// Function to format blog date
+function formatBlogDate(dateString) {
+    try {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'short', 
+            day: 'numeric' 
+        });
+    } catch (error) {
+        return dateString; // Return original if parsing fails
+    }
+}
+
+// Function to generate blog tags HTML
+function generateBlogTags(tags) {
+    if (!Array.isArray(tags)) {
+        tags = [tags];
+    }
+    
+    return tags.map(tag => {
+        const encodedTag = encodeURIComponent(tag);
+        return `<a href="/blog/?tag=${encodedTag}" class="badge">${tag}</a>`;
+    }).join('\n                            ');
+}
+
+// Function to build blog pages using template
+function buildBlogPages() {
+    const blogsPath = 'js/blogs.json';
+    if (!fs.existsSync(blogsPath)) {
+        console.warn(`Blog data file not found: ${blogsPath}`);
+        return;
+    }
+
+    try {
+        const blogs = JSON.parse(fs.readFileSync(blogsPath, 'utf8'));
+        
+        console.log(`📝 Building ${blogs.length} blog pages...`);
+        
+        blogs.forEach(blog => {
+            const urlPath = blog.url.replace(/^\//, '').replace(/\/$/, '');
+            const contentFilePath = `${urlPath}/content.html`;
+            const outputPath = `${urlPath}/index.html`;
+
+            // Check if content file exists
+            if (!fs.existsSync(contentFilePath)) {
+                console.warn(`⚠️  Content file not found: ${contentFilePath} (skipping ${blog.title})`);
+                return;
+            }
+
+            // Load blog content
+            const content = fs.readFileSync(contentFilePath, 'utf8');
+            
+            // Calculate base path for this blog (usually ../../)
+            const basePath = '../../';
+            
+            // Process featured image path
+            const featuredImage = blog.featured_image.startsWith('images/') 
+                ? blog.featured_image 
+                : `images/${blog.featured_image}`;
+            
+            // Generate tags HTML
+            const blogTags = generateBlogTags(blog.tags);
+            
+            // Get primary tag for related posts
+            const primaryTag = Array.isArray(blog.tags) ? blog.tags[0] : blog.tags;
+            
+            // Generate related posts ID
+            const relatedPostsId = `posts-${primaryTag.replace(/[^a-zA-Z0-9]/g, '')}`;
+            
+            // Build the blog page
+            builder.buildPage({
+                template: 'blog-post',
+                outputPath: outputPath,
+                pageTitle: blog.title,
+                content: content,
+                featuredImage: featuredImage,
+                blogDate: formatBlogDate(blog.date),
+                blogAuthor: blog.author,
+                blogTags: blogTags,
+                primaryTag: primaryTag,
+                relatedPostsId: relatedPostsId,
+                headerClass: 'defaultHeader'
+            });
+            
+            console.log(`✅ Built blog: ${blog.title}`);
+        });
+        
+        console.log(`\n🎉 Generated ${blogs.length} blog pages!`);
+    } catch (error) {
+        console.error(`Error building blog pages:`, error);
+    }
+}
+
+// Build configuration for non-blog pages only
 const pageConfigs = [
     // Home page
     {
@@ -177,108 +271,25 @@ const pageConfigs = [
     }
 ];
 
-// Generate blog post pages from the blogs.json
-function generateBlogPages() {
-    const blogsPath = 'js/blogs.json';
-    if (fs.existsSync(blogsPath)) {
-        const blogs = JSON.parse(fs.readFileSync(blogsPath, 'utf8'));
-        
-        blogs.forEach(blog => {
-            // Extract the path from the URL
-            const urlPath = blog.url.replace(/^\//, '').replace(/\/$/, '');
-            const outputPath = `${urlPath}/index.html`;
-            
-            // Create a simple blog post page
-            pageConfigs.push({
-                outputPath: outputPath,
-                pageTitle: blog.title,
-                headerClass: 'defaultHeader',
-                content: `
-                    <section class="bannerV2 accentColor2 post_banner" style="background-image:url(${blog.featured_image});">
-                        <div class="container">
-                            <div class="small_container">
-                                <span class="badge">Blog</span>
-                                <h1>${blog.title}</h1>
-                                <div class="post-meta">
-                                    <span class="date">${new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                                    <span class="author">by ${blog.author}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="blog_post_content accentColor4">
-                        <div class="container">
-                            <div class="blog_post_flex">
-                                <main class="main-content">
-                                    <div class="post-body-byline">
-                                        <div class="tags">
-                                            ${blog.tags.map(tag => `<a href="/blog/?tag=${encodeURIComponent(tag)}" class="badge">${tag}</a>`).join(' ')}
-                                        </div>
-                                    </div>
-                                    <article class="post-content">
-                                        <h2>${blog.title}</h2>
-                                        <p>${blog.summary}</p>
-                                        ${blog.content || '<p><em>Content coming soon...</em></p>'}
-                                    </article>
-                                    <a href="/blog" class="cm-btn btn2 backToBlog">
-                                        <span class="btn-icon"></span>
-                                        <span class="btn-text">Back to Blog</span>
-                                    </a>
-                                </main>
-                                <aside class="sidebar">
-                                    <div class="sticky-sidebar">
-                                        <div class="sidebar-widget">
-                                            <h3>Recent Posts</h3>
-                                            <div class="recent_posts_grid" id="recent-posts"></div>
-                                        </div>
-                                    </div>
-                                </aside>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="book_demo accentColor2">
-                        <div class="container">
-                            <div class="demo-card max-width-800">
-                                <h3>Ready to Take Your Business to the Next Level?</h3>
-                                <p>Let's explore how our custom technology solutions can drive real impact. Book a free consultation to discover how we can support your goals with innovation, expertise, and results-driven execution.</p>
-                                <div class="btn-grid">
-                                    <div class="btn-item">
-                                        <a href="/contact-us" class="cm-btn">
-                                            <span class="btn-text">Talk to an Expert</span>
-                                            <span class="btn-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                                                    <path style="fill:currentColor;" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"></path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                `,
-                additionalScripts: `<script src="js/main.js"></script>`
-            });
-        });
-    }
-}
-
-// Generate blog pages
-generateBlogPages();
-
 // Build all pages
 console.log('Building Aexyn website...');
-console.log(`Total pages to build: ${pageConfigs.length}`);
+console.log(`📄 Building ${pageConfigs.length} non-blog pages...`);
 
 builder.buildPages(pageConfigs);
 
+console.log(`📝 Building blog pages using template system...`);
+buildBlogPages();
+
 console.log('\n✅ Build complete!');
-console.log('\nGenerated pages:');
+console.log('\nGenerated/Updated pages:');
 pageConfigs.forEach(config => {
     console.log(`  - ${config.outputPath} (${config.pageTitle})`);
 });
+
+console.log('\n📁 Architecture:');
+console.log('  - Blog pages: Generated from content files + template');
+console.log('  - Other pages: Generated from source templates');
+console.log('  - Components: Shared across all pages (header, footer, etc.)');
 
 console.log('\n🚀 To serve locally, run: npm run serve');
 console.log('📝 To rebuild, run: npm run build'); 
