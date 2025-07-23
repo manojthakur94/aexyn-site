@@ -25,7 +25,7 @@ function loadPageContent(pageName) {
 // Function to replace basePath in content loaded from files
 function processPageContent(content, basePath) {
     let processedContent = content.replace(/\{\{basePath\}\}/g, basePath);
-    
+
     // Replace BASE_URL placeholders if environment variable is set
     if (BASE_URL) {
         processedContent = processedContent.replace(/\{\{baseUrl\}\}/g, BASE_URL);
@@ -37,7 +37,7 @@ function processPageContent(content, basePath) {
     } else {
         processedContent = processedContent.replace(/\{\{baseUrl\}\}/g, '');
     }
-    
+
     return processedContent;
 }
 
@@ -45,10 +45,10 @@ function processPageContent(content, basePath) {
 function formatBlogDate(dateString) {
     try {
         const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'short', 
-            day: 'numeric' 
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
         });
     } catch (error) {
         return dateString; // Return original if parsing fails
@@ -60,7 +60,7 @@ function generateBlogTags(tags) {
     if (!Array.isArray(tags)) {
         tags = [tags];
     }
-    
+
     return tags.map(tag => {
         const encodedTag = encodeURIComponent(tag);
         return `<a href="/blog/?tag=${encodedTag}" class="badge">${tag}</a>`;
@@ -77,9 +77,9 @@ function buildBlogPages() {
 
     try {
         const blogs = JSON.parse(fs.readFileSync(blogsPath, 'utf8'));
-        
+
         console.log(`📝 Building ${blogs.length} blog pages...`);
-        
+
         blogs.forEach(blog => {
             const urlPath = blog.url.replace(/^\//, '').replace(/\/$/, '');
             const contentFilePath = `${urlPath}/content.html`;
@@ -93,24 +93,24 @@ function buildBlogPages() {
 
             // Load blog content
             const content = fs.readFileSync(contentFilePath, 'utf8');
-            
+
             // Calculate base path for this blog (usually ../../)
             const basePath = '../../';
-            
+
             // Process featured image path
-            const featuredImage = blog.featured_image.startsWith('images/') 
-                ? blog.featured_image 
+            const featuredImage = blog.featured_image.startsWith('images/')
+                ? blog.featured_image
                 : `images/${blog.featured_image}`;
-            
+
             // Generate tags HTML
             const blogTags = generateBlogTags(blog.tags);
-            
+
             // Get primary tag for related posts
             const primaryTag = Array.isArray(blog.tags) ? blog.tags[0] : blog.tags;
-            
+
             // Generate related posts ID
             const relatedPostsId = `posts-${primaryTag.replace(/[^a-zA-Z0-9]/g, '')}`;
-            
+
             // Build the blog page
             builder.buildPage({
                 template: 'blog-post',
@@ -125,10 +125,10 @@ function buildBlogPages() {
                 relatedPostsId: relatedPostsId,
                 headerClass: 'defaultHeader'
             });
-            
+
             console.log(`✅ Built blog: ${blog.title}`);
         });
-        
+
         console.log(`\n🎉 Generated ${blogs.length} blog pages!`);
     } catch (error) {
         console.error(`Error building blog pages:`, error);
@@ -202,6 +202,48 @@ const pageConfigs = [
         pageTitle: 'IoT Development',
         headerClass: 'defaultHeader',
         content: processPageContent(loadPageContent('iot-development'), '../../')
+    },
+
+    {
+        outputPath: 'services/ai-consulting-transformation/index.html',
+        pageTitle: 'AI Consulting & Transformation',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('ai-consulting-transformation'), '../../')
+    },
+
+    {
+        outputPath: 'services/llm-based-apps-and-gpt-integration/index.html',
+        pageTitle: 'LLM Based Apps & GPT Integration',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('llm-based-apps-and-gpt-integration'), '../../')
+    },
+
+    {
+        outputPath: 'services/machine-learning-and-predictive-modeling/index.html',
+        pageTitle: 'Machine Learning & Predictive Modeling',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('machine-learning-and-predictive-modeling'), '../../')
+    },
+
+    {
+        outputPath: 'services/nlp-computer-vision-and-generative-ai/index.html',
+        pageTitle: 'NLP, Computer Vision & Generative AI',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('nlp-computer-vision-and-generative-ai'), '../../')
+    },
+
+    {
+        outputPath: 'services/custom-ai-solution-development/index.html',
+        pageTitle: 'Custom AI Solution Development',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('custom-ai-solution-development'), '../../')
+    },
+
+    {
+        outputPath: 'services/mlops-and-continuous-training-pipelines/index.html',
+        pageTitle: 'MLOps & Continuous Training Pipelines',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('mlops-and-continuous-training-pipelines'), '../../')
     },
 
     {
@@ -292,4 +334,4 @@ console.log('  - Other pages: Generated from source templates');
 console.log('  - Components: Shared across all pages (header, footer, etc.)');
 
 console.log('\n🚀 To serve locally, run: npm run serve');
-console.log('📝 To rebuild, run: npm run build'); 
+console.log('📝 To rebuild, run: npm run build');
