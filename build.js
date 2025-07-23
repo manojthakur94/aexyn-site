@@ -85,6 +85,7 @@ class SiteBuilder {
 
         // Prepare variables for replacement
         const variables = {
+            ...config, // Include all config properties for template replacement
             basePath,
             baseUrl: this.baseUrl,
             nodeEnv: this.nodeEnv,
