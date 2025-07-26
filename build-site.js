@@ -247,6 +247,28 @@ const pageConfigs = [
     },
 
     {
+        outputPath: 'contact-us/index.html',
+        pageTitle: 'Contact Us',
+        headerClass: 'defaultHeader',
+        content: processPageContent(loadPageContent('contact-us'), '../'),
+        additionalHead: `
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
+        `,
+        additionalScripts: `
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        const iti = window.intlTelInput(input, {
+          initialCountry: "us",
+          separateDialCode: true,
+          preferredCountries: ["in", "us", "gb", "ae", "au"],
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js"
+        });
+    </script>
+        `
+    },
+
+    {
         outputPath: 'services/wap/index.html',
         pageTitle: 'Web Application Platform',
         headerClass: 'defaultHeader',
